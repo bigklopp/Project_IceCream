@@ -57,12 +57,6 @@
     <Compile Include="FM_Item.Designer.cs">
       <DependentUpon>FM_Item.cs</DependentUpon>
     </Compile>
-    <Compile Include="FM_Order.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FM_Order.Designer.cs">
-      <DependentUpon>FM_Order.cs</DependentUpon>
-    </Compile>
     <Compile Include="FM_OrderConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,8 +64,8 @@
       <DependentUpon>FM_OrderConfirm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FM_OrderConfirm.resx">
-      <DependentUpon>FM_OrderConfirm.cs</DependentUpon>
+    <EmbeddedResource Include="FM_Item.resx">
+      <DependentUpon>FM_Item.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
