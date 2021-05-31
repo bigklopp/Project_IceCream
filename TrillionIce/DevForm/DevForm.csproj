@@ -57,12 +57,6 @@
     <Compile Include="FM_Item.Designer.cs">
       <DependentUpon>FM_Item.cs</DependentUpon>
     </Compile>
-    <Compile Include="FM_Order.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FM_Order.Designer.cs">
-      <DependentUpon>FM_Order.cs</DependentUpon>
-    </Compile>
     <Compile Include="FM_OrderConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
