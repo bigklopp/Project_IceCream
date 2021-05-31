@@ -75,6 +75,9 @@
     <EmbeddedResource Include="FM_ChangePw.resx">
       <DependentUpon>FM_ChangePw.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FM_CustMain.resx">
+      <DependentUpon>FM_CustMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FM_LogIn.resx">
       <DependentUpon>FM_LogIn.cs</DependentUpon>
     </EmbeddedResource>

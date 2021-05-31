@@ -29,6 +29,7 @@ namespace TrillionIce
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FM_LogIn));
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUserId = new System.Windows.Forms.TextBox();
             this.btnChangePw = new System.Windows.Forms.Button();
@@ -117,8 +118,9 @@ namespace TrillionIce
             this.Controls.Add(this.txtUserId);
             this.Controls.Add(this.btnChangePw);
             this.Controls.Add(this.btnSignIn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FM_LogIn";
-            this.Text = "FM_Login";
+            this.Text = "TrillionIce";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
