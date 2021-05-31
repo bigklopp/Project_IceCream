@@ -35,7 +35,7 @@ namespace DevForm
                 {
                     dgvGrid.DataSource = DtTemp;
                 }
-                //dataGridView1.CurrentRow.Cells["USERID"].Value.ToString();
+               
                 
 
                 dgvGrid.Columns["USERID"].HeaderText = "고객 ID";
@@ -74,16 +74,6 @@ namespace DevForm
         public void OrderCancel()
         
         {
-
-                /*if (dataGridView1.Rows.Count == 0) return;
-                int iSelectIndex = dataGridView1.CurrentCell.RowIndex;
-                DataTable DtTemp = (DataTable)dataGridView1.DataSource;
-                DtTemp.Rows[iSelectIndex].Delete();*/ // 지금 데이터 그리드 뷰의 선택된 셀의 로우인덱스에 해당하는 열을 지움
-
-                // 아니 DataTable의 객체 DtTemp의 행을 하나 지웠는데 왜 dataGridView의 행이 지워지냐고 ㅅㅂ
-                // dgv의 데이터 소스를 DataTable의 객체로 선언하면 실시간 연동이 되는거냐?
-                // 표 상에서만 지워
-
                 if (dgvGrid.Rows.Count == 0) return;
             if (MessageBox.Show("해당 구매 내역을 삭제하시겠습니까?", "데이터 삭제", MessageBoxButtons.YesNo)
             == DialogResult.No) return;
@@ -114,7 +104,7 @@ namespace DevForm
 
             try
             {
-                // FOREACH : 내가 추가, 수정, 삭제한 모든 행동을 GETCHANGE로 담아서 모두 처리한다.
+                
 
                 foreach (DataRow drRow in dtTempChange.Rows)
                 {
@@ -161,10 +151,10 @@ namespace DevForm
             if (MessageBox.Show("해당 구매 내역을 확정하시겠습니까?", "데이터 적용", MessageBoxButtons.YesNo)
             == DialogResult.No) return;
 
-            string orderSeq = dgvGrid.CurrentRow.Cells["ORDERSEQ"].Value.ToString(); //선택된 셀
-            string userID = dgvGrid.CurrentRow.Cells["USERID"].Value.ToString(); //선택된 셀
-            string itemCode = dgvGrid.CurrentRow.Cells["ITEMCODE"].Value.ToString(); //선택된 셀
-            string orderDate = dgvGrid.CurrentRow.Cells["ORDERDATE"].Value.ToString(); //선택된 셀
+            string orderSeq = dgvGrid.CurrentRow.Cells["ORDERSEQ"].Value.ToString(); 
+            string userID = dgvGrid.CurrentRow.Cells["USERID"].Value.ToString(); 
+            string itemCode = dgvGrid.CurrentRow.Cells["ITEMCODE"].Value.ToString(); 
+            string orderDate = dgvGrid.CurrentRow.Cells["ORDERDATE"].Value.ToString(); 
 
             DataTable dtTemp = (DataTable)dgvGrid.DataSource;
             for (int i = 0; i < dtTemp.Rows.Count; i++)
@@ -173,7 +163,7 @@ namespace DevForm
                 if (dtTemp.Rows[i][6].ToString() == orderSeq &&
                     dtTemp.Rows[i][0].ToString() == userID &&
                     dtTemp.Rows[i][7].ToString() == itemCode &&
-                    dtTemp.Rows[i][4].ToString() == orderDate) //선택된 셀의 UserID와 같으면
+                    dtTemp.Rows[i][4].ToString() == orderDate) 
                 {
                     dtTemp.Rows[i].Delete();
                     break;
@@ -192,7 +182,6 @@ namespace DevForm
 
             try
             {
-                // FOREACH : 내가 추가, 수정, 삭제한 모든 행동을 GETCHANGE로 담아서 모두 처리한다.
                 foreach (DataRow drRow in dtTempChange.Rows)
                 { 
                     if (drRow.RowState == DataRowState.Deleted)
