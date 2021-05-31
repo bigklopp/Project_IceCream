@@ -47,14 +47,14 @@ namespace DevForm
             this.dgvGrid.Name = "dgvGrid";
             this.dgvGrid.RowHeadersWidth = 51;
             this.dgvGrid.RowTemplate.Height = 27;
-            this.dgvGrid.Size = new System.Drawing.Size(800, 450);
+            this.dgvGrid.Size = new System.Drawing.Size(1136, 778);
             this.dgvGrid.TabIndex = 0;
             // 
             // btnOrderConfirm
             // 
-            this.btnOrderConfirm.Location = new System.Drawing.Point(435, 17);
+            this.btnOrderConfirm.Location = new System.Drawing.Point(535, 78);
             this.btnOrderConfirm.Name = "btnOrderConfirm";
-            this.btnOrderConfirm.Size = new System.Drawing.Size(155, 54);
+            this.btnOrderConfirm.Size = new System.Drawing.Size(220, 91);
             this.btnOrderConfirm.TabIndex = 1;
             this.btnOrderConfirm.Text = "주문 확정";
             this.btnOrderConfirm.UseVisualStyleBackColor = true;
@@ -62,9 +62,9 @@ namespace DevForm
             // 
             // btnOrderCancel
             // 
-            this.btnOrderCancel.Location = new System.Drawing.Point(606, 17);
+            this.btnOrderCancel.Location = new System.Drawing.Point(807, 78);
             this.btnOrderCancel.Name = "btnOrderCancel";
-            this.btnOrderCancel.Size = new System.Drawing.Size(151, 54);
+            this.btnOrderCancel.Size = new System.Drawing.Size(214, 91);
             this.btnOrderCancel.TabIndex = 2;
             this.btnOrderCancel.Text = "주문 취소";
             this.btnOrderCancel.UseVisualStyleBackColor = true;
@@ -75,9 +75,9 @@ namespace DevForm
             this.groupBox1.Controls.Add(this.btnOrderConfirm);
             this.groupBox1.Controls.Add(this.btnOrderCancel);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 365);
+            this.groupBox1.Location = new System.Drawing.Point(0, 539);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(800, 85);
+            this.groupBox1.Size = new System.Drawing.Size(1136, 239);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -85,9 +85,10 @@ namespace DevForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1136, 778);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvGrid);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FM_OrderConfirm";
             this.Text = "주문 내역";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
