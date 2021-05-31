@@ -39,7 +39,8 @@ namespace TrillionIce
             }
             if (FM_LogIn.auth == "SYS")
             {
-                // 관리자메인화면 출력하고, 고객메인화면 닫기 구현
+                FM_SysMain SysMain = new FM_SysMain();
+                SysMain.ShowDialog();
             }
             else
             {
