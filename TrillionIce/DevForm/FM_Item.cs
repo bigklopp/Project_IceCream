@@ -49,8 +49,7 @@ namespace DevForm
                              "       EDITOR     " +
                              "  FROM TB_1_ITEM WITH(NOLOCK) " +
                              " WHERE ITEMCODE LIKE '%" + itemCode + "%' " +
-                             "   AND ITEMNAME LIKE '%" + itemName + "%' " +
-                             "   AND STOCK BETWEEN '" + startStock + "' AND '" + endStock + "'";
+                             "   AND ITEMNAME LIKE '%" + itemName + "%' ";
 
                 SqlDataAdapter Adapter = new SqlDataAdapter(Sql, Connect);
 
@@ -67,7 +66,6 @@ namespace DevForm
                 // 그리드뷰의 헤더 명칭 선언
                 dgvItem.Columns["ITEMCODE"].HeaderText = "품목 코드";
                 dgvItem.Columns["ITEMNAME"].HeaderText = "품목 명";
-                dgvItem.Columns["ENDFLAG"].HeaderText = "단종 여부";
                 dgvItem.Columns["MAKEDATE"].HeaderText = "등록 일시";
                 dgvItem.Columns["MAKER"].HeaderText = "등록자";
                 dgvItem.Columns["EDITDATE"].HeaderText = "수정일시";
@@ -89,7 +87,9 @@ namespace DevForm
 
             }
             catch (Exception ex)
-            { }
+            {
+                MessageBox.Show("다음과 같은 에러가 발생하였습니다 : " + ex.ToString());
+            }
             finally
             { Connect.Close();}
         }

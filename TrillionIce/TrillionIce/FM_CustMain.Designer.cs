@@ -84,11 +84,11 @@ namespace TrillionIce
             // dgvCart
             // 
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCart.Location = new System.Drawing.Point(1389, 83);
+            this.dgvCart.Location = new System.Drawing.Point(1365, 83);
             this.dgvCart.Name = "dgvCart";
             this.dgvCart.RowHeadersWidth = 51;
             this.dgvCart.RowTemplate.Height = 27;
-            this.dgvCart.Size = new System.Drawing.Size(297, 269);
+            this.dgvCart.Size = new System.Drawing.Size(321, 269);
             this.dgvCart.TabIndex = 2;
             // 
             // groupBox1
@@ -113,7 +113,7 @@ namespace TrillionIce
             // btnPurchase
             // 
             this.btnPurchase.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnPurchase.Location = new System.Drawing.Point(1459, 441);
+            this.btnPurchase.Location = new System.Drawing.Point(1450, 442);
             this.btnPurchase.Name = "btnPurchase";
             this.btnPurchase.Size = new System.Drawing.Size(169, 38);
             this.btnPurchase.TabIndex = 10;
@@ -124,28 +124,30 @@ namespace TrillionIce
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.Location = new System.Drawing.Point(1459, 399);
+            this.button2.Location = new System.Drawing.Point(1450, 400);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 28);
             this.button2.TabIndex = 9;
             this.button2.Text = "장바구니에서 삭제";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(1459, 370);
+            this.button1.Location = new System.Drawing.Point(1450, 371);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 28);
             this.button1.TabIndex = 8;
             this.button1.Text = "장바구니에 추가";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(1427, 403);
+            this.label4.Location = new System.Drawing.Point(1418, 404);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 20);
             this.label4.TabIndex = 7;
@@ -155,7 +157,7 @@ namespace TrillionIce
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(1427, 374);
+            this.label3.Location = new System.Drawing.Point(1418, 375);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 20);
             this.label3.TabIndex = 6;

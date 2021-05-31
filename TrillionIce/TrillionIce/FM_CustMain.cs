@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevForm;
 
@@ -17,7 +12,10 @@ namespace TrillionIce
     {
 
         public static string IdValidation = "FAIL";
+
         public static DataTable cartData = new DataTable();
+        public static DataColumn cartItem = new DataColumn("상품명", typeof(string));
+        public static DataColumn quantity = new DataColumn("수량", typeof(int));
 
         #region Connection Init
         private SqlConnection Conn = null;
@@ -27,6 +25,10 @@ namespace TrillionIce
         {
             InitializeComponent();
             btnSearch_Click(null, null);
+            
+            cartData.Columns.Add(cartItem);
+            cartData.Columns.Add(quantity);
+            dgvCart.DataSource = cartData;
         }
 
         private void btnLogIn_Click(object sender, EventArgs e)
@@ -155,6 +157,19 @@ namespace TrillionIce
             {
                 Conn.Close();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string selectedItem = dgvItem.CurrentRow.Cells["ITEMNAME"].Value.ToString();
+            DataRow row = cartData.NewRow();
+            row[cartItem] = selectedItem;
+            cartData.Rows.Add(row);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
