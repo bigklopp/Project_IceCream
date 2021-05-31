@@ -43,7 +43,8 @@ namespace TrillionIce
                 MessageBox.Show("선택한 상품이 없습니다.");
                 return;
             }
-            dgvCart.DataSource = cartData;
+            FM_Order CustOrder = new FM_Order();
+            CustOrder.ShowDialog();
         }
     }
 }

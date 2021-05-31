@@ -46,6 +46,7 @@ namespace TrillionIce
             this.btnPurchase.TabIndex = 0;
             this.btnPurchase.Text = "결제";
             this.btnPurchase.UseVisualStyleBackColor = true;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // btnCancel
             // 
@@ -55,6 +56,7 @@ namespace TrillionIce
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // dgvCart
             // 
