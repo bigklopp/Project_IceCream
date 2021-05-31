@@ -90,6 +90,9 @@
     <EmbeddedResource Include="FM_Order.resx">
       <DependentUpon>FM_Order.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FM_SysMain.resx">
+      <DependentUpon>FM_SysMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
