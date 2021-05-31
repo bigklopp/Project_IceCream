@@ -47,7 +47,7 @@ namespace TrillionIce
 
             #region Fill Data
             SqlDataAdapter Adapter = new SqlDataAdapter(
-                $"SELECT USERNAME, PW FROM TB_1_USER WHERE USERID = '{userId}'", Conn);
+                $"SELECT USERNAME, PW, AUTH FROM TB_1_USER WHERE USERID = '{userId}'", Conn);
             DataTable DtTemp = new DataTable();
             Adapter.Fill(DtTemp);
             #endregion
@@ -72,6 +72,7 @@ namespace TrillionIce
             {
                 Common.signInId = txtUserId.Text;
                 Common.signInName = DtTemp.Rows[0]["USERNAME"].ToString();
+                string[] TagArray = new string[2] { "", "" };
                 Tag = DtTemp.Rows[0]["USERNAME"].ToString();
                 Close();
             }
