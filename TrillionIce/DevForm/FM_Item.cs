@@ -20,34 +20,6 @@ namespace DevForm
         {
             InitializeComponent();
         }
-        private void FM_ITEM_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                // 콤보박스 품목 상세 데이터 조회 및 추가
-                // 접속 정보 커넥선 에 등록 및 객체 선언
-                Connect = new SqlConnection(strConn);
-                Connect.Open();
-
-                if (Connect.State != System.Data.ConnectionState.Open)
-                {
-                    MessageBox.Show("데이터 베이스 연결에 실패 하였습니다.");
-                    return;
-                }
-
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT DISTINCT ITEMDESC FROM TB_TESTITEM_DSH ", Connect);
-                DataTable dtTemp = new DataTable();
-                adapter.Fill(dtTemp);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                Connect.Close();
-            }
-        }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -225,7 +197,7 @@ namespace DevForm
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("다음과 같은 에러가 발생하였습니다 : " + ex.ToString());
             }
         }
 
@@ -264,7 +236,7 @@ namespace DevForm
             }
             catch (Exception ex)
             {
-                MessageBox.Show("이미지 저장 중 오류가 발생하였습니다.");
+                MessageBox.Show("다음과 같은 에러가 발생하였습니다 : " + ex.ToString());
             }
             finally
             {
@@ -295,7 +267,9 @@ namespace DevForm
                 MessageBox.Show("정상적으로 삭제 하였습니다.");
             }
             catch (Exception ex)
-            { }
+            {
+                MessageBox.Show("다음과 같은 에러가 발생하였습니다 : " + ex.ToString());
+            }
             finally
             {Connect.Close();}
         }
@@ -329,6 +303,7 @@ namespace DevForm
             }
             catch (Exception ex)
             {
+                MessageBox.Show("다음과 같은 에러가 발생하였습니다 : " + ex.ToString());
             }
             finally
             {

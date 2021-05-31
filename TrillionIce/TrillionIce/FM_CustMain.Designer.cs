@@ -41,7 +41,7 @@ namespace TrillionIce
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbItemName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picImage = new System.Windows.Forms.PictureBox();
             this.dgvItem = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@ namespace TrillionIce
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -100,7 +100,7 @@ namespace TrillionIce
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lbItemName);
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.picImage);
             this.groupBox1.Controls.Add(this.dgvItem);
             this.groupBox1.Controls.Add(this.dgvCart);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -180,13 +180,13 @@ namespace TrillionIce
             this.lbItemName.Size = new System.Drawing.Size(0, 20);
             this.lbItemName.TabIndex = 4;
             // 
-            // pictureBox1
+            // picImage
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(920, 51);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(234, 269);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.picImage.Location = new System.Drawing.Point(920, 51);
+            this.picImage.Name = "picImage";
+            this.picImage.Size = new System.Drawing.Size(234, 269);
+            this.picImage.TabIndex = 4;
+            this.picImage.TabStop = false;
             // 
             // dgvItem
             // 
@@ -197,6 +197,7 @@ namespace TrillionIce
             this.dgvItem.RowTemplate.Height = 27;
             this.dgvItem.Size = new System.Drawing.Size(863, 692);
             this.dgvItem.TabIndex = 4;
+            this.dgvItem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItem_CellClick);
             // 
             // groupBox2
             // 
@@ -285,7 +286,7 @@ namespace TrillionIce
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -303,7 +304,7 @@ namespace TrillionIce
         private System.Windows.Forms.DataGridView dgvCart;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbItemName;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picImage;
         private System.Windows.Forms.DataGridView dgvItem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
