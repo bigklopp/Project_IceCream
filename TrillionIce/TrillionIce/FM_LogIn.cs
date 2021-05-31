@@ -19,6 +19,7 @@ namespace TrillionIce
         string ConnInfo = Common.db;
         #endregion
 
+        public static string auth = "";
         int pwFailCount = 0;
 
         public FM_LogIn()
@@ -74,6 +75,7 @@ namespace TrillionIce
                 Common.signInName = DtTemp.Rows[0]["USERNAME"].ToString();
                 string[] TagArray = new string[2] { "", "" };
                 Tag = DtTemp.Rows[0]["USERNAME"].ToString();
+                auth = DtTemp.Rows[0]["AUTH"].ToString();
                 Close();
             }
         }

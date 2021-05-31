@@ -37,7 +37,14 @@ namespace TrillionIce
             {
                 Environment.Exit(0);
             }
-            lbUserName.Text = $"{IdValidation}님, 환영합니다!";
+            if (FM_LogIn.auth == "SYS")
+            {
+                // 관리자메인화면 출력하고, 고객메인화면 닫기 구현
+            }
+            else
+            {
+                lbUserName.Text = $"{IdValidation}님, 환영합니다!";
+            }
         }
 
         private void btnPurchase_Click(object sender, EventArgs e)
