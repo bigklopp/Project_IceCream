@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace TrillionIce
 {
-    public partial class Form1 : Form
+    public partial class FM_SysMain : Form
     {
-        public Form1()
+        public FM_SysMain()
         {
             InitializeComponent();
         }
-
     }
 }

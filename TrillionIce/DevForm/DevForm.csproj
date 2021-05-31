@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7A03A3CC-8C6C-4469-9C84-7B9BDEE27DFE}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>TrillionIce</RootNamespace>
-    <AssemblyName>TrillionIce</AssemblyName>
+    <ProjectGuid>{88A82604-66BD-4E08-ABEB-A278823EB27D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DevForm</RootNamespace>
+    <AssemblyName>DevForm</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,31 +49,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FM_ChangePw.cs">
+    <Compile Include="Common.cs" />
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="FM_Item.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FM_ChangePw.Designer.cs">
-      <DependentUpon>FM_ChangePw.cs</DependentUpon>
+    <Compile Include="FM_Item.Designer.cs">
+      <DependentUpon>FM_Item.cs</DependentUpon>
     </Compile>
-    <Compile Include="FM_CustMain.cs">
+    <Compile Include="FM_Order.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FM_CustMain.Designer.cs">
-      <DependentUpon>FM_CustMain.cs</DependentUpon>
+    <Compile Include="FM_Order.Designer.cs">
+      <DependentUpon>FM_Order.cs</DependentUpon>
     </Compile>
-    <Compile Include="FM_LogIn.cs">
+    <Compile Include="FM_OrderConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FM_LogIn.Designer.cs">
-      <DependentUpon>FM_LogIn.cs</DependentUpon>
+    <Compile Include="FM_OrderConfirm.Designer.cs">
+      <DependentUpon>FM_OrderConfirm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FM_SysMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FM_SysMain.Designer.cs">
-      <DependentUpon>FM_SysMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,12 +91,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DevForm\DevForm.csproj">
-      <Project>{88a82604-66bd-4e08-abeb-a278823eb27d}</Project>
-      <Name>DevForm</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
