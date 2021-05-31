@@ -70,12 +70,6 @@
     <Compile Include="FM_Order.Designer.cs">
       <DependentUpon>FM_Order.cs</DependentUpon>
     </Compile>
-    <Compile Include="FM_OrderConfirm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FM_OrderConfirm.Designer.cs">
-      <DependentUpon>FM_OrderConfirm.cs</DependentUpon>
-    </Compile>
     <Compile Include="FM_SysMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,9 +89,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FM_Order.resx">
       <DependentUpon>FM_Order.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FM_OrderConfirm.resx">
-      <DependentUpon>FM_OrderConfirm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
