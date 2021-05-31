@@ -29,12 +29,121 @@ namespace TrillionIce
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.txtNewPw = new System.Windows.Forms.TextBox();
+            this.txtCurrentPw = new System.Windows.Forms.TextBox();
+            this.txtUserId = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnChangePw = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // txtNewPw
+            // 
+            this.txtNewPw.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtNewPw.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtNewPw.Location = new System.Drawing.Point(63, 363);
+            this.txtNewPw.Name = "txtNewPw";
+            this.txtNewPw.Size = new System.Drawing.Size(245, 27);
+            this.txtNewPw.TabIndex = 12;
+            this.txtNewPw.Text = " New Password";
+            this.txtNewPw.Enter += new System.EventHandler(this.txtNewPw_Enter);
+            // 
+            // txtCurrentPw
+            // 
+            this.txtCurrentPw.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtCurrentPw.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtCurrentPw.Location = new System.Drawing.Point(62, 313);
+            this.txtCurrentPw.Name = "txtCurrentPw";
+            this.txtCurrentPw.Size = new System.Drawing.Size(245, 27);
+            this.txtCurrentPw.TabIndex = 11;
+            this.txtCurrentPw.Text = " Current Password";
+            this.txtCurrentPw.Enter += new System.EventHandler(this.txtCurrentPw_Enter);
+            // 
+            // txtUserId
+            // 
+            this.txtUserId.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUserId.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtUserId.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtUserId.Location = new System.Drawing.Point(63, 263);
+            this.txtUserId.Name = "txtUserId";
+            this.txtUserId.Size = new System.Drawing.Size(245, 27);
+            this.txtUserId.TabIndex = 10;
+            this.txtUserId.Text = " Userid";
+            this.txtUserId.Enter += new System.EventHandler(this.txtUserId_Enter);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancel.Location = new System.Drawing.Point(233, 464);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 30);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnChangePw
+            // 
+            this.btnChangePw.Font = new System.Drawing.Font("맑은 고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnChangePw.Location = new System.Drawing.Point(63, 413);
+            this.btnChangePw.Name = "btnChangePw";
+            this.btnChangePw.Size = new System.Drawing.Size(245, 35);
+            this.btnChangePw.TabIndex = 8;
+            this.btnChangePw.Text = "Change Password";
+            this.btnChangePw.UseVisualStyleBackColor = true;
+            this.btnChangePw.Click += new System.EventHandler(this.btnChangePw_Click);
+            this.btnChangePw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnChangePw_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.ForeColor = System.Drawing.Color.PaleVioletRed;
+            this.label1.Location = new System.Drawing.Point(112, 156);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 32);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "TrillionIce";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TrillionIce.Properties.Resources.icons8_fruit_ice_cream_cone_100;
+            this.pictureBox1.Location = new System.Drawing.Point(127, 46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(93, 107);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // FM_ChangePw
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.SeaShell;
+            this.ClientSize = new System.Drawing.Size(383, 547);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtNewPw);
+            this.Controls.Add(this.txtCurrentPw);
+            this.Controls.Add(this.txtUserId);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnChangePw);
+            this.Name = "FM_ChangePw";
             this.Text = "FM_ChangePw";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+        private System.Windows.Forms.TextBox txtNewPw;
+        private System.Windows.Forms.TextBox txtCurrentPw;
+        private System.Windows.Forms.TextBox txtUserId;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnChangePw;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

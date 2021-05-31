@@ -1,7 +1,7 @@
 ﻿
 namespace DevForm
 {
-    class Common
+    public class Common
     {
         public static string signInId = string.Empty;
         public static string signInName = string.Empty;
