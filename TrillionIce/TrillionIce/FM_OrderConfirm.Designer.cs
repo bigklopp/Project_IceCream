@@ -32,7 +32,9 @@ namespace DevForm
             this.dgvGrid = new System.Windows.Forms.DataGridView();
             this.btnOrderConfirm = new System.Windows.Forms.Button();
             this.btnOrderCancel = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvGrid
@@ -40,17 +42,17 @@ namespace DevForm
             this.dgvGrid.AllowUserToAddRows = false;
             this.dgvGrid.AllowUserToDeleteRows = false;
             this.dgvGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGrid.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvGrid.Location = new System.Drawing.Point(0, 0);
             this.dgvGrid.Name = "dgvGrid";
             this.dgvGrid.RowHeadersWidth = 51;
             this.dgvGrid.RowTemplate.Height = 27;
-            this.dgvGrid.Size = new System.Drawing.Size(800, 361);
+            this.dgvGrid.Size = new System.Drawing.Size(800, 450);
             this.dgvGrid.TabIndex = 0;
             // 
             // btnOrderConfirm
             // 
-            this.btnOrderConfirm.Location = new System.Drawing.Point(451, 367);
+            this.btnOrderConfirm.Location = new System.Drawing.Point(435, 17);
             this.btnOrderConfirm.Name = "btnOrderConfirm";
             this.btnOrderConfirm.Size = new System.Drawing.Size(155, 54);
             this.btnOrderConfirm.TabIndex = 1;
@@ -60,7 +62,7 @@ namespace DevForm
             // 
             // btnOrderCancel
             // 
-            this.btnOrderCancel.Location = new System.Drawing.Point(622, 367);
+            this.btnOrderCancel.Location = new System.Drawing.Point(606, 17);
             this.btnOrderCancel.Name = "btnOrderCancel";
             this.btnOrderCancel.Size = new System.Drawing.Size(151, 54);
             this.btnOrderCancel.TabIndex = 2;
@@ -68,19 +70,30 @@ namespace DevForm
             this.btnOrderCancel.UseVisualStyleBackColor = true;
             this.btnOrderCancel.Click += new System.EventHandler(this.btnOrderCancel_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnOrderConfirm);
+            this.groupBox1.Controls.Add(this.btnOrderCancel);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox1.Location = new System.Drawing.Point(0, 365);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(800, 85);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            // 
             // FM_OrderConfirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnOrderCancel);
-            this.Controls.Add(this.btnOrderConfirm);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvGrid);
             this.Name = "FM_OrderConfirm";
             this.Text = "주문 내역";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FM_OrderConfirm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -90,6 +103,7 @@ namespace DevForm
         private System.Windows.Forms.DataGridView dgvGrid;
         private System.Windows.Forms.Button btnOrderConfirm;
         private System.Windows.Forms.Button btnOrderCancel;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
