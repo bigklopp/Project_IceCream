@@ -33,8 +33,10 @@ namespace DevForm
             this.btnOrderConfirm = new System.Windows.Forms.Button();
             this.btnOrderCancel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvGrid
@@ -44,11 +46,11 @@ namespace DevForm
             this.dgvGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvGrid.Location = new System.Drawing.Point(0, 0);
+            this.dgvGrid.Location = new System.Drawing.Point(3, 21);
             this.dgvGrid.Name = "dgvGrid";
             this.dgvGrid.RowHeadersWidth = 51;
             this.dgvGrid.RowTemplate.Height = 27;
-            this.dgvGrid.Size = new System.Drawing.Size(1136, 778);
+            this.dgvGrid.Size = new System.Drawing.Size(1130, 515);
             this.dgvGrid.TabIndex = 0;
             // 
             // btnOrderConfirm
@@ -88,14 +90,24 @@ namespace DevForm
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvGrid);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1136, 539);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            // 
             // FM_OrderConfirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1136, 778);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dgvGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FM_OrderConfirm";
             this.Text = "주문 내역";
@@ -103,6 +115,7 @@ namespace DevForm
             this.Load += new System.EventHandler(this.FM_OrderConfirm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -113,6 +126,7 @@ namespace DevForm
         private System.Windows.Forms.Button btnOrderConfirm;
         private System.Windows.Forms.Button btnOrderCancel;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 

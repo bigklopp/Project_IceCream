@@ -50,6 +50,8 @@ namespace TrillionIce
             else
             {
                 lbUserName.Text = $"{IdValidation}님, 환영합니다!";
+                btnLogIn.Visible = false;
+                lbUserName.Location = new Point(1350, 28);
             }
         }
 
@@ -58,6 +60,7 @@ namespace TrillionIce
             if (IdValidation == "FAIL")
             {
                 MessageBox.Show("구매하려면 로그인하세요");
+                btnLogIn_Click(null, null);
                 return;
             }
             if (cartData.Rows.Count == 0)
@@ -178,6 +181,14 @@ namespace TrillionIce
         private void groupBox4_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtSearchItem_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch_Click(sender, e);
+            }
         }
     }
 }

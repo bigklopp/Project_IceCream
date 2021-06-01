@@ -23,6 +23,7 @@ namespace DevForm
                 {
                     dgvGrid.DataSource = null;
                     MessageBox.Show("조회할 데이터가 없습니다.");
+                    return;
                 }
                 else
                 {
