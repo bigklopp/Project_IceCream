@@ -59,11 +59,12 @@ namespace TrillionIce
             // lbUserName
             // 
             this.lbUserName.AutoSize = true;
-            this.lbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbUserName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbUserName.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbUserName.ForeColor = System.Drawing.Color.LightCoral;
             this.lbUserName.Location = new System.Drawing.Point(1382, 28);
             this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Size = new System.Drawing.Size(180, 24);
+            this.lbUserName.Size = new System.Drawing.Size(189, 22);
             this.lbUserName.TabIndex = 0;
             this.lbUserName.Text = "구매하려면 로그인하세요";
             // 
@@ -183,11 +184,11 @@ namespace TrillionIce
             // 
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("휴먼편지체", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(1368, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 27);
+            this.label2.Size = new System.Drawing.Size(80, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "장바구니";
             // 
@@ -232,7 +233,7 @@ namespace TrillionIce
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.txtSearchItem);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox2.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox2.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox2.Location = new System.Drawing.Point(25, 28);
             this.groupBox2.Name = "groupBox2";
@@ -246,7 +247,7 @@ namespace TrillionIce
             this.btnSearch.BackColor = System.Drawing.Color.MistyRose;
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSearch.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSearch.ForeColor = System.Drawing.Color.DimGray;
             this.btnSearch.Location = new System.Drawing.Point(360, 41);
             this.btnSearch.Name = "btnSearch";
@@ -269,7 +270,7 @@ namespace TrillionIce
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(14, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 24);
+            this.label1.Size = new System.Drawing.Size(53, 22);
             this.label1.TabIndex = 6;
             this.label1.Text = "품목명";
             // 
@@ -285,6 +286,7 @@ namespace TrillionIce
             this.groupBox4.Size = new System.Drawing.Size(1712, 149);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // FM_CustMain
             // 

@@ -83,6 +83,7 @@ namespace TrillionIce
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.MistyRose;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stbItem,
@@ -98,19 +99,21 @@ namespace TrillionIce
             // 
             // stbItem
             // 
+            this.stbItem.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.stbItem.Image = global::TrillionIce.Properties.Resources.icons8_search_50;
             this.stbItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.stbItem.Name = "stbItem";
-            this.stbItem.Size = new System.Drawing.Size(93, 24);
+            this.stbItem.Size = new System.Drawing.Size(85, 24);
             this.stbItem.Text = "품목관리";
             this.stbItem.Click += new System.EventHandler(this.stbItem_Click);
             // 
             // stbOrder
             // 
+            this.stbOrder.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.stbOrder.Image = global::TrillionIce.Properties.Resources.icons8_plus_50;
             this.stbOrder.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.stbOrder.Name = "stbOrder";
-            this.stbOrder.Size = new System.Drawing.Size(93, 24);
+            this.stbOrder.Size = new System.Drawing.Size(81, 24);
             this.stbOrder.Text = "주문접수";
             this.stbOrder.Click += new System.EventHandler(this.stbOrder_Click);
             // 
@@ -121,6 +124,7 @@ namespace TrillionIce
             // 
             // stbClose
             // 
+            this.stbClose.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.stbClose.Image = global::TrillionIce.Properties.Resources.icons8_delete_document_50;
             this.stbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.stbClose.Name = "stbClose";
@@ -130,10 +134,11 @@ namespace TrillionIce
             // 
             // stbExit
             // 
+            this.stbExit.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.stbExit.Image = global::TrillionIce.Properties.Resources.icons8_delete_50;
             this.stbExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.stbExit.Name = "stbExit";
-            this.stbExit.Size = new System.Drawing.Size(63, 24);
+            this.stbExit.Size = new System.Drawing.Size(55, 24);
             this.stbExit.Text = "종료";
             this.stbExit.Click += new System.EventHandler(this.stbExit_Click);
             // 
@@ -150,7 +155,7 @@ namespace TrillionIce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(1030, 551);
             this.Controls.Add(this.myTabControl1);
             this.Controls.Add(this.toolStrip1);
