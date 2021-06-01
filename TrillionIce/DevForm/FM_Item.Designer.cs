@@ -212,11 +212,11 @@ namespace DevForm
             // 
             this.label6.AutoSize = true;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Font = new System.Drawing.Font("휴먼편지체", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
             this.label6.Location = new System.Drawing.Point(965, 49);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 27);
+            this.label6.Size = new System.Drawing.Size(106, 25);
             this.label6.TabIndex = 18;
             this.label6.Text = "상품 이미지";
             // 

@@ -121,10 +121,12 @@ namespace TrillionIce
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("휴먼편지체", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(934, 51);
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label5.Font = new System.Drawing.Font("휴먼편지체", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(937, 51);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 17);
+            this.label5.Size = new System.Drawing.Size(106, 25);
             this.label5.TabIndex = 11;
             this.label5.Text = "상품 이미지";
             // 
@@ -198,7 +200,7 @@ namespace TrillionIce
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("휴먼편지체", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(1368, 51);
+            this.label2.Location = new System.Drawing.Point(1365, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 25);
             this.label2.TabIndex = 5;
