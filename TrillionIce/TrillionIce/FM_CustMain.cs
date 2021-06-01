@@ -174,5 +174,10 @@ namespace TrillionIce
         {
             button1_Click(null, null);
         }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
