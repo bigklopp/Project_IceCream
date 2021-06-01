@@ -129,9 +129,9 @@ namespace DevForm
             this.btnSearch.ForeColor = System.Drawing.Color.DimGray;
             this.btnSearch.Location = new System.Drawing.Point(893, 34);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(104, 29);
+            this.btnSearch.Size = new System.Drawing.Size(104, 32);
             this.btnSearch.TabIndex = 8;
-            this.btnSearch.Text = "검색";
+            this.btnSearch.Text = "조회";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -152,7 +152,7 @@ namespace DevForm
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1611, 105);
+            this.groupBox1.Size = new System.Drawing.Size(1626, 105);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "품목 검색";
@@ -168,7 +168,7 @@ namespace DevForm
             this.dgvItem.Name = "dgvItem";
             this.dgvItem.RowHeadersWidth = 51;
             this.dgvItem.RowTemplate.Height = 27;
-            this.dgvItem.Size = new System.Drawing.Size(794, 476);
+            this.dgvItem.Size = new System.Drawing.Size(899, 476);
             this.dgvItem.TabIndex = 10;
             this.dgvItem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItem_CellClick);
             // 
@@ -176,7 +176,7 @@ namespace DevForm
             // 
             this.picImage.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picImage.Location = new System.Drawing.Point(1212, 77);
+            this.picImage.Location = new System.Drawing.Point(1291, 77);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(305, 238);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -202,7 +202,7 @@ namespace DevForm
             this.groupBox2.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox2.Location = new System.Drawing.Point(0, 105);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1611, 582);
+            this.groupBox2.Size = new System.Drawing.Size(1626, 582);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "상품 상세";
@@ -231,13 +231,36 @@ namespace DevForm
             this.currentImage.TabIndex = 19;
             this.currentImage.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(965, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 27);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "상품 이미지";
+            // 
+            // currentImage
+            // 
+            this.currentImage.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.currentImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.currentImage.Location = new System.Drawing.Point(965, 77);
+            this.currentImage.Name = "currentImage";
+            this.currentImage.Size = new System.Drawing.Size(305, 238);
+            this.currentImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.currentImage.TabIndex = 19;
+            this.currentImage.TabStop = false;
+            // 
             // btnPicDelete
             // 
             this.btnPicDelete.BackColor = System.Drawing.Color.MistyRose;
             this.btnPicDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPicDelete.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPicDelete.ForeColor = System.Drawing.Color.DimGray;
-            this.btnPicDelete.Location = new System.Drawing.Point(1456, 341);
+            this.btnPicDelete.Location = new System.Drawing.Point(1535, 341);
             this.btnPicDelete.Name = "btnPicDelete";
             this.btnPicDelete.Size = new System.Drawing.Size(61, 30);
             this.btnPicDelete.TabIndex = 17;
@@ -251,7 +274,7 @@ namespace DevForm
             this.btnPicSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPicSave.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPicSave.ForeColor = System.Drawing.Color.DimGray;
-            this.btnPicSave.Location = new System.Drawing.Point(1386, 341);
+            this.btnPicSave.Location = new System.Drawing.Point(1465, 341);
             this.btnPicSave.Name = "btnPicSave";
             this.btnPicSave.Size = new System.Drawing.Size(64, 30);
             this.btnPicSave.TabIndex = 16;
@@ -265,7 +288,7 @@ namespace DevForm
             this.btnLoadPic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLoadPic.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnLoadPic.ForeColor = System.Drawing.Color.DimGray;
-            this.btnLoadPic.Location = new System.Drawing.Point(1212, 341);
+            this.btnLoadPic.Location = new System.Drawing.Point(1291, 341);
             this.btnLoadPic.Name = "btnLoadPic";
             this.btnLoadPic.Size = new System.Drawing.Size(150, 30);
             this.btnLoadPic.TabIndex = 15;
@@ -315,7 +338,7 @@ namespace DevForm
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label5.Font = new System.Drawing.Font("휴먼편지체", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(1212, 49);
+            this.label5.Location = new System.Drawing.Point(1291, 49);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 25);
             this.label5.TabIndex = 9;
@@ -325,7 +348,7 @@ namespace DevForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1611, 687);
+            this.ClientSize = new System.Drawing.Size(1626, 687);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

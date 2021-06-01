@@ -39,6 +39,7 @@ namespace DevForm
 
                 string Sql = "SELECT ITEMCODE,  " +
                              "       ITEMNAME,  " +
+                             $"      STOCK,     " +
                              "       MAKEDATE,  " +
                              "       MAKER,     " +
                              "       EDITDATE,  " +
@@ -62,6 +63,7 @@ namespace DevForm
                 // 그리드뷰의 헤더 명칭 선언
                 dgvItem.Columns["ITEMCODE"].HeaderText = "품목 코드";
                 dgvItem.Columns["ITEMNAME"].HeaderText = "품목 명";
+                dgvItem.Columns["STOCK"].HeaderText = "재고수량";
                 dgvItem.Columns["MAKEDATE"].HeaderText = "등록 일시";
                 dgvItem.Columns["MAKER"].HeaderText = "등록자";
                 dgvItem.Columns["EDITDATE"].HeaderText = "수정일시";
@@ -69,7 +71,7 @@ namespace DevForm
 
                 // 그리드 뷰의 폭 지정
                 dgvItem.Columns[0].Width = 100;
-                dgvItem.Columns[1].Width = 100;
+                dgvItem.Columns[1].Width = 200;
                 dgvItem.Columns[2].Width = 100;
                 dgvItem.Columns[3].Width = 100;
                 dgvItem.Columns[4].Width = 100;
