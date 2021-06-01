@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevForm;
 
@@ -14,11 +9,8 @@ namespace TrillionIce
 {
     public partial class FM_LogIn : Form
     {
-        #region Connection Init
         private SqlConnection Conn = null;
         string ConnInfo = Common.db;
-        #endregion
-
         public static string auth = "";
         int pwFailCount = 0;
 
@@ -30,7 +22,6 @@ namespace TrillionIce
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            #region Connection Open
             Conn = new SqlConnection(ConnInfo);
             Conn.Open();
 
@@ -39,19 +30,14 @@ namespace TrillionIce
                 MessageBox.Show("DB 연결에 실패하였습니다.");
                 return;
             }
-            #endregion
 
-            #region Variable Init
             string userId = txtUserId.Text;
             string password = txtPassword.Text;
-            #endregion
 
-            #region Fill Data
             SqlDataAdapter Adapter = new SqlDataAdapter(
                 $"SELECT USERNAME, PW, AUTH FROM TB_1_USER WHERE USERID = '{userId}'", Conn);
             DataTable DtTemp = new DataTable();
             Adapter.Fill(DtTemp);
-            #endregion
 
             if (DtTemp.Rows.Count == 0)
             {
@@ -108,6 +94,5 @@ namespace TrillionIce
                 btnSignIn_Click(sender, e);
             }
         }
-
     }
 }
