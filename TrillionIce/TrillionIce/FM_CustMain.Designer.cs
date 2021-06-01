@@ -299,7 +299,6 @@ namespace TrillionIce
             this.groupBox4.Size = new System.Drawing.Size(1712, 149);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // FM_CustMain
             // 
