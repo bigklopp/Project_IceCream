@@ -92,6 +92,8 @@ namespace DevForm
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (dgvItem.Rows.Count == 0) return;
+
             // 데이터 그리드 뷰 에 신규 행 추가
             DataRow dr = ((DataTable)dgvItem.DataSource).NewRow();
             ((DataTable)dgvItem.DataSource).Rows.Add(dr);
@@ -117,13 +119,13 @@ namespace DevForm
             cmd.Connection = Connect;
 
             cmd.CommandText = "UPDATE TB_1_ITEM                         " +
-                              "    SET ITEMNAME  = '" + itemCode + "',   " +
+                              "    SET ITEMNAME  = '" + itemName + "',   " +
                               "        EDITOR = '" + Common.signInId + "',  " +
                               "        EDITDATE = GETDATE()          " +
                               "  WHERE ITEMCODE = '" + itemCode + "'" +
                               " IF (@@ROWCOUNT =0) " +
-                              "INSERT INTO TB_TESTITEM_DSH(ITEMCODE,  ITEMNAME,   MAKEDATE,   MAKER) " +
-                              "VALUES('" + itemCode + "','" + itemName + "','" + Common.signInId + "')";
+                              "INSERT INTO TB_1_ITEM(ITEMCODE,  ITEMNAME,   MAKEDATE,   MAKER) " +
+                              "VALUES('" + itemCode + "','" + itemName + "'," +  "GETDATE(), '" + Common.signInId + "')";
 
             cmd.ExecuteNonQuery();
 
@@ -131,6 +133,8 @@ namespace DevForm
             Tran.Commit();
             MessageBox.Show("정상적으로 등록 하였습니다.");
             Connect.Close();
+
+            btnSearch_Click(null, null);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
