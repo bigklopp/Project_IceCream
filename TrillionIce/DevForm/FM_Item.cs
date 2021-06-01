@@ -167,10 +167,10 @@ namespace DevForm
                 MessageBox.Show("정상적으로 삭제 하였습니다.");
                 btnSearch_Click(null, null); // 데이터 재조회
             }
-            catch
+            catch (Exception ex)
             {
                 tran.Rollback();
-                MessageBox.Show("데이터 삭제에 실패 하였습니다.");
+                MessageBox.Show("데이터 삭제에 실패 하였습니다." + ex.ToString());
             }
             finally
             {
