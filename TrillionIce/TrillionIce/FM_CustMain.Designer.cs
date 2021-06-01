@@ -241,7 +241,7 @@ namespace TrillionIce
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.LemonChiffon;
+            this.groupBox2.BackColor = System.Drawing.Color.SeaShell;
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.txtSearchItem);
             this.groupBox2.Controls.Add(this.label1);
