@@ -46,7 +46,6 @@ namespace TrillionIce
             {
                 FM_SysMain SysMain = new FM_SysMain();
                 SysMain.ShowDialog();
-                this.Close();
             }
             else
             {
@@ -177,11 +176,6 @@ namespace TrillionIce
         private void dgvItem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             button1_Click(null, null);
-        }
-
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void txtSearchItem_KeyDown(object sender, KeyEventArgs e)
