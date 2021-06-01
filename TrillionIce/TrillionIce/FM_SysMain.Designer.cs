@@ -74,14 +74,12 @@ namespace TrillionIce
             this.FM_Item.Name = "FM_Item";
             this.FM_Item.Size = new System.Drawing.Size(152, 26);
             this.FM_Item.Text = "품목관리";
-            this.FM_Item.Click += new System.EventHandler(this.FM_Item_Click);
             // 
             // FM_OrderConfirm
             // 
             this.FM_OrderConfirm.Name = "FM_OrderConfirm";
             this.FM_OrderConfirm.Size = new System.Drawing.Size(152, 26);
             this.FM_OrderConfirm.Text = "주문접수";
-            this.FM_OrderConfirm.Click += new System.EventHandler(this.FM_OrderConfirm_Click);
             // 
             // toolStrip1
             // 

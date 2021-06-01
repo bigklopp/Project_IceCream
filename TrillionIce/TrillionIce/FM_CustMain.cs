@@ -73,7 +73,6 @@ namespace TrillionIce
         {
             try
             {
-                #region Connection Open
                 Conn = new SqlConnection(ConnInfo);
                 Conn.Open();
 
@@ -82,20 +81,14 @@ namespace TrillionIce
                     MessageBox.Show("DB 연결에 실패하였습니다.");
                     return;
                 }
-                #endregion
 
-                #region Variable Init
-                string itemName = "";
-                #endregion
+                string itemName = txtSearchItem.Text;
 
-                #region Fill Data
                 SqlDataAdapter Adapter = new SqlDataAdapter("SELECT ITEMNAME, DESCRIPTION FROM TB_1_ITEM WITH(NOLOCK) " +
                                                            $"WHERE ITEMNAME LIKE '%{itemName}%' ", Conn);
                 DataTable DtTemp = new DataTable();
                 Adapter.Fill(DtTemp);
-                #endregion
 
-                #region Show Data
                 if (DtTemp.Rows.Count == 0)
                 {
                     MessageBox.Show("검색 조건에 맞는 데이터가 없습니다.");
@@ -103,9 +96,7 @@ namespace TrillionIce
                     return;
                 }
                 dgvItem.DataSource = DtTemp;
-                #endregion
 
-                #region Set Column
                 dgvItem.Columns["ITEMNAME"].HeaderText = "상품명";
                 dgvItem.Columns["DESCRIPTION"].HeaderText = "상품설명";
 
@@ -114,7 +105,6 @@ namespace TrillionIce
 
                 dgvItem.Columns["ITEMNAME"].ReadOnly = true;
                 dgvItem.Columns["DESCRIPTION"].ReadOnly = true;
-                #endregion
             }
             catch (Exception ex)
             {
@@ -183,16 +173,6 @@ namespace TrillionIce
         private void dgvItem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             button1_Click(null, null);
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picImage_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
