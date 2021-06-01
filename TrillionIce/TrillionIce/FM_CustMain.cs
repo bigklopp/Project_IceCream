@@ -17,10 +17,9 @@ namespace TrillionIce
         public static DataColumn cartItem = new DataColumn("ITEMNAME", typeof(string));
         public static DataColumn quantity = new DataColumn("QUANTITY", typeof(int));
 
-        #region Connection Init
         private SqlConnection Conn = null;
         private string ConnInfo = Common.db;
-        #endregion
+
         public FM_CustMain()
         {
             InitializeComponent();
@@ -29,6 +28,9 @@ namespace TrillionIce
             cartData.Columns.Add(cartItem);
             cartData.Columns.Add(quantity);
             dgvCart.DataSource = cartData;
+
+            dgvCart.Columns["ITEMNAME"].HeaderText = "상품명";
+            dgvCart.Columns["QUANTITY"].HeaderText = "수량";
         }
 
         private void btnLogIn_Click(object sender, EventArgs e)
