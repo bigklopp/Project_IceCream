@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using System.Windows.Forms;
+using DevForm;
 
 namespace TrillionIce
 {
@@ -27,6 +28,29 @@ namespace TrillionIce
             }
 
             myTabControl1.AddForm(ShowForm);
+        }
+
+        private void stbItem_Click(object sender, EventArgs e)
+        {
+            FM_Item itemForm = new FM_Item();
+            myTabControl1.AddForm(itemForm);
+        }
+
+        private void stbOrder_Click(object sender, EventArgs e)
+        {
+            FM_OrderConfirm orderForm = new FM_OrderConfirm();
+            myTabControl1.AddForm(orderForm);
+        }
+
+        private void stbClose_Click(object sender, EventArgs e)
+        {
+            if (myTabControl1.TabPages.Count == 0) return;
+            myTabControl1.SelectedTab.Dispose();
+        }
+
+        private void stbExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
     public partial class MDIForm : TabPage { }
