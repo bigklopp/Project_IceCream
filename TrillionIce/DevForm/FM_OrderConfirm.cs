@@ -21,19 +21,18 @@ namespace DevForm
             DBHelper helper = new DBHelper(false);
             try
             {
-                string sUserID = string.Empty;
-                string sUserName = string.Empty;
-                DataTable DtTemp = new DataTable();
-                DtTemp = helper.FillTable("SP_ORDER_LHC_S1", CommandType.StoredProcedure);
+                
+                DataTable dtTemp = new DataTable();
+                dtTemp = helper.FillTable("SP_ORDER_LHC_S1", CommandType.StoredProcedure);
 
-                if (DtTemp.Rows.Count == 0)
+                if (dtTemp.Rows.Count == 0)
                 {
                     dgvGrid.DataSource = null;
                     MessageBox.Show("조회할 데이터가 없습니다.");
                 }
                 else
                 {
-                    dgvGrid.DataSource = DtTemp;
+                    dgvGrid.DataSource = dtTemp;
                 }
                
                 
@@ -171,8 +170,6 @@ namespace DevForm
             }
 
 
-            string userName = string.Empty;
-            string passWord = string.Empty;
             int quantity;
 
             DataTable dtTempChange = ((DataTable)dgvGrid.DataSource).GetChanges();
