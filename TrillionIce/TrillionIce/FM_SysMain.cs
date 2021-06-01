@@ -66,7 +66,13 @@ namespace TrillionIce
 
         private void stbExit_Click(object sender, EventArgs e)
         {
+            FM_CustMain.IdValidation = "FAIL";
             Close();
+        }
+
+        private void FM_SysMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FM_CustMain.IdValidation = "FAIL";
         }
     }
     public partial class MDIForm : TabPage { }
