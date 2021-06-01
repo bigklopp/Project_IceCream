@@ -32,12 +32,28 @@ namespace TrillionIce
 
         private void stbItem_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < myTabControl1.TabPages.Count; i++)
+            {
+                if (myTabControl1.TabPages[i].Name == "FM_Item")
+                {
+                    myTabControl1.SelectedTab = myTabControl1.TabPages[i];
+                    return;
+                }
+            }
             FM_Item itemForm = new FM_Item();
             myTabControl1.AddForm(itemForm);
         }
 
         private void stbOrder_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < myTabControl1.TabPages.Count; i++)
+            {
+                if (myTabControl1.TabPages[i].Name == "FM_OrderConfirm")
+                {
+                    myTabControl1.SelectedTab = myTabControl1.TabPages[i];
+                    return;
+                }
+            }
             FM_OrderConfirm orderForm = new FM_OrderConfirm();
             myTabControl1.AddForm(orderForm);
         }
