@@ -169,7 +169,18 @@ namespace TrillionIce
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (this.dgvItem.Rows.Count == 0)
+            {
+                MessageBox.Show("장바구니에 품목이 없습니다.");
+                return;
+            }
+            if (MessageBox.Show("장바구니에서 삭제하시겠습니까?", "Delete", MessageBoxButtons.YesNo) == DialogResult.No) return;
+            dgvCart.Rows.Remove(dgvCart.CurrentRow);
+        }
 
+        private void dgvItem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            button1_Click(null, null);
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

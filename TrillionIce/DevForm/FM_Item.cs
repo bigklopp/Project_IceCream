@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
@@ -14,8 +9,9 @@ namespace DevForm
 {
     public partial class FM_Item : Form
     {
-        private SqlConnection Connect = null; 
-        private string strConn = "Data Source=222.235.141.8; Initial Catalog=AppDev;User ID=kfqs1;Password=1234";
+        private SqlConnection Connect = null;
+        private string strConn = Common.db;
+        
         public FM_Item()
         {
             InitializeComponent();

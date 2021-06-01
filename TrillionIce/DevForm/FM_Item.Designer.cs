@@ -150,6 +150,8 @@ namespace DevForm
             // 
             // dgvItem
             // 
+            this.dgvItem.AllowUserToAddRows = false;
+            this.dgvItem.AllowUserToDeleteRows = false;
             this.dgvItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItem.Location = new System.Drawing.Point(36, 77);
             this.dgvItem.Name = "dgvItem";

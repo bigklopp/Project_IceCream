@@ -14,21 +14,17 @@ namespace TrillionIce
 {
     public partial class FM_ChangePw : Form
     {
-        #region Connection Init
         private SqlConnection Conn = null;
         string ConnInfo = Common.db;
-        #endregion
-
         int pwFailCount = 0;
+
         public FM_ChangePw()
         {
             InitializeComponent();
         }
 
-
         private void btnChangePw_Click(object sender, EventArgs e)
         {
-            #region Connection Open
             Conn = new SqlConnection(ConnInfo);
             Conn.Open();
 
@@ -37,20 +33,15 @@ namespace TrillionIce
                 MessageBox.Show("DB 연결에 실패하였습니다.");
                 return;
             }
-            #endregion
 
-            #region Variable Init
             string userId = txtUserId.Text;
             string currentPw = txtCurrentPw.Text;
             string newPw = txtNewPw.Text;
-            #endregion
 
-            #region Fill Data
             SqlDataAdapter Adapter = new SqlDataAdapter(
                 $"SELECT PW FROM TB_1_USER WHERE USERID = '{userId}'", Conn);
             DataTable DtTemp = new DataTable();
             Adapter.Fill(DtTemp);
-            #endregion
 
             if (DtTemp.Rows.Count == 0)
             {
@@ -73,22 +64,16 @@ namespace TrillionIce
                 if (MessageBox.Show("새로운 비밀번호로 변경하시겠습니까?", "Change password", MessageBoxButtons.YesNo)
                     == DialogResult.No) return;
 
-                #region Transaction Decl
                 SqlTransaction Txn;
                 SqlCommand Cmd = new SqlCommand();
-                #endregion
 
-                #region Transaction Init
                 Txn = Conn.BeginTransaction("PW_Change");
                 Cmd.Transaction = Txn;
                 Cmd.Connection = Conn;
-                #endregion
 
-                #region Transaction Commit
                 Cmd.CommandText = $"UPDATE TB_1_USER SET PW = '{newPw}' WHERE USERID = '{userId}'";
                 Cmd.ExecuteNonQuery();
                 Txn.Commit();
-                #endregion
 
                 MessageBox.Show("성공적으로 비밀번호를 변경하였습니다.");
                 Close();

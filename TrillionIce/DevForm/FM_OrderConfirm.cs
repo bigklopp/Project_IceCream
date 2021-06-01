@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DevForm
@@ -69,9 +63,7 @@ namespace DevForm
 
         }
 
-
         public void OrderCancel()
-        
         {
                 if (dgvGrid.Rows.Count == 0) return;
             if (MessageBox.Show("해당 구매 내역을 삭제하시겠습니까?", "데이터 삭제", MessageBoxButtons.YesNo)
@@ -218,18 +210,14 @@ namespace DevForm
 
 
         }
-       
 
         private void FM_OrderConfirm_Load(object sender, EventArgs e)
         {
             Inquire();
         }
 
-
-
         private void btnOrderConfirm_Click(object sender, EventArgs e)
         {
-
             OrderConfirm();
         }
 
@@ -237,7 +225,5 @@ namespace DevForm
         {
             OrderCancel();
         }
-
-       
     }
 }

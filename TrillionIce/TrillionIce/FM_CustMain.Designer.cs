@@ -213,6 +213,7 @@ namespace TrillionIce
             this.dgvItem.Size = new System.Drawing.Size(863, 692);
             this.dgvItem.TabIndex = 4;
             this.dgvItem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItem_CellClick);
+            this.dgvItem.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItem_CellDoubleClick);
             // 
             // groupBox2
             // 
