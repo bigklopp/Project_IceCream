@@ -63,7 +63,7 @@ namespace TrillionIce
             this.FM_Item,
             this.FM_OrderConfirm});
             this.mSystem.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.mSystem.ForeColor = System.Drawing.Color.DimGray;
+            this.mSystem.ForeColor = System.Drawing.Color.Black;
             this.mSystem.Name = "mSystem";
             this.mSystem.Size = new System.Drawing.Size(101, 26);
             this.mSystem.Text = "시스템 관리";
@@ -72,13 +72,13 @@ namespace TrillionIce
             // FM_Item
             // 
             this.FM_Item.Name = "FM_Item";
-            this.FM_Item.Size = new System.Drawing.Size(144, 26);
+            this.FM_Item.Size = new System.Drawing.Size(224, 26);
             this.FM_Item.Text = "품목관리";
             // 
             // FM_OrderConfirm
             // 
             this.FM_OrderConfirm.Name = "FM_OrderConfirm";
-            this.FM_OrderConfirm.Size = new System.Drawing.Size(144, 26);
+            this.FM_OrderConfirm.Size = new System.Drawing.Size(224, 26);
             this.FM_OrderConfirm.Text = "주문접수";
             // 
             // toolStrip1
