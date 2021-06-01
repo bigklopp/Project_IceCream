@@ -76,24 +76,32 @@ namespace TrillionIce
             // 
             // btnCancel
             // 
-            this.btnCancel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancel.BackColor = System.Drawing.Color.MistyRose;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancel.ForeColor = System.Drawing.Color.DimGray;
             this.btnCancel.Location = new System.Drawing.Point(233, 464);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 30);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnChangePw
             // 
-            this.btnChangePw.Font = new System.Drawing.Font("맑은 고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnChangePw.BackColor = System.Drawing.Color.MistyRose;
+            this.btnChangePw.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangePw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangePw.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnChangePw.ForeColor = System.Drawing.Color.DimGray;
             this.btnChangePw.Location = new System.Drawing.Point(63, 413);
             this.btnChangePw.Name = "btnChangePw";
             this.btnChangePw.Size = new System.Drawing.Size(245, 35);
             this.btnChangePw.TabIndex = 8;
             this.btnChangePw.Text = "Change Password";
-            this.btnChangePw.UseVisualStyleBackColor = true;
+            this.btnChangePw.UseVisualStyleBackColor = false;
             this.btnChangePw.Click += new System.EventHandler(this.btnChangePw_Click);
             this.btnChangePw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnChangePw_KeyDown);
             // 

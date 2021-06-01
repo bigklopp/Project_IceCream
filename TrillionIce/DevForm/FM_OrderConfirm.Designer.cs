@@ -52,22 +52,27 @@ namespace DevForm
             // 
             // btnOrderConfirm
             // 
+            this.btnOrderConfirm.BackColor = System.Drawing.Color.MistyRose;
+            this.btnOrderConfirm.Font = new System.Drawing.Font("휴먼편지체", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnOrderConfirm.ForeColor = System.Drawing.Color.DimGray;
             this.btnOrderConfirm.Location = new System.Drawing.Point(535, 78);
             this.btnOrderConfirm.Name = "btnOrderConfirm";
             this.btnOrderConfirm.Size = new System.Drawing.Size(220, 91);
             this.btnOrderConfirm.TabIndex = 1;
             this.btnOrderConfirm.Text = "주문 확정";
-            this.btnOrderConfirm.UseVisualStyleBackColor = true;
+            this.btnOrderConfirm.UseVisualStyleBackColor = false;
             this.btnOrderConfirm.Click += new System.EventHandler(this.btnOrderConfirm_Click);
             // 
             // btnOrderCancel
             // 
+            this.btnOrderCancel.BackColor = System.Drawing.Color.MistyRose;
+            this.btnOrderCancel.Font = new System.Drawing.Font("휴먼편지체", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnOrderCancel.Location = new System.Drawing.Point(807, 78);
             this.btnOrderCancel.Name = "btnOrderCancel";
             this.btnOrderCancel.Size = new System.Drawing.Size(214, 91);
             this.btnOrderCancel.TabIndex = 2;
             this.btnOrderCancel.Text = "주문 취소";
-            this.btnOrderCancel.UseVisualStyleBackColor = true;
+            this.btnOrderCancel.UseVisualStyleBackColor = false;
             this.btnOrderCancel.Click += new System.EventHandler(this.btnOrderCancel_Click);
             // 
             // groupBox1
@@ -75,6 +80,7 @@ namespace DevForm
             this.groupBox1.Controls.Add(this.btnOrderConfirm);
             this.groupBox1.Controls.Add(this.btnOrderCancel);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(0, 539);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1136, 239);
@@ -85,6 +91,7 @@ namespace DevForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1136, 778);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvGrid);

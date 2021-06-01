@@ -35,6 +35,21 @@ namespace TrillionIce
 
             myTabControl1.AddForm(ShowForm);
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FM_Item_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FM_OrderConfirm_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     public partial class MDIForm : TabPage { }
 

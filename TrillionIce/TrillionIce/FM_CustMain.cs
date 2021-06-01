@@ -171,5 +171,15 @@ namespace TrillionIce
         {
 
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picImage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

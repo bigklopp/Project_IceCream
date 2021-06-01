@@ -40,6 +40,7 @@ namespace TrillionIce
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.SeaShell;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mSystem});
@@ -54,8 +55,10 @@ namespace TrillionIce
             this.mSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FM_Item,
             this.FM_OrderConfirm});
+            this.mSystem.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.mSystem.ForeColor = System.Drawing.Color.DimGray;
             this.mSystem.Name = "mSystem";
-            this.mSystem.Size = new System.Drawing.Size(103, 24);
+            this.mSystem.Size = new System.Drawing.Size(101, 24);
             this.mSystem.Text = "시스템 관리";
             this.mSystem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mSystem_DropDownItemClicked);
             // 
@@ -64,12 +67,14 @@ namespace TrillionIce
             this.FM_Item.Name = "FM_Item";
             this.FM_Item.Size = new System.Drawing.Size(224, 26);
             this.FM_Item.Text = "품목관리";
+            this.FM_Item.Click += new System.EventHandler(this.FM_Item_Click);
             // 
             // FM_OrderConfirm
             // 
             this.FM_OrderConfirm.Name = "FM_OrderConfirm";
             this.FM_OrderConfirm.Size = new System.Drawing.Size(224, 26);
             this.FM_OrderConfirm.Text = "주문접수";
+            this.FM_OrderConfirm.Click += new System.EventHandler(this.FM_OrderConfirm_Click);
             // 
             // myTabControl1
             // 

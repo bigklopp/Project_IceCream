@@ -64,8 +64,11 @@ namespace TrillionIce
             // 
             // btnChangePw
             // 
-            this.btnChangePw.BackColor = System.Drawing.SystemColors.Control;
-            this.btnChangePw.Font = new System.Drawing.Font("맑은 고딕", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnChangePw.BackColor = System.Drawing.Color.MistyRose;
+            this.btnChangePw.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangePw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangePw.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnChangePw.ForeColor = System.Drawing.Color.DimGray;
             this.btnChangePw.Location = new System.Drawing.Point(142, 435);
             this.btnChangePw.Name = "btnChangePw";
             this.btnChangePw.Size = new System.Drawing.Size(149, 30);
@@ -76,8 +79,11 @@ namespace TrillionIce
             // 
             // btnSignIn
             // 
-            this.btnSignIn.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSignIn.Font = new System.Drawing.Font("맑은 고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSignIn.BackColor = System.Drawing.Color.MistyRose;
+            this.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignIn.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSignIn.ForeColor = System.Drawing.Color.DimGray;
             this.btnSignIn.Location = new System.Drawing.Point(46, 385);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(245, 35);

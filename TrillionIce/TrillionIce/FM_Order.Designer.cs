@@ -40,9 +40,12 @@ namespace TrillionIce
             // 
             // btnPurchase
             // 
+            this.btnPurchase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPurchase.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnPurchase.ForeColor = System.Drawing.Color.DimGray;
             this.btnPurchase.Location = new System.Drawing.Point(43, 423);
             this.btnPurchase.Name = "btnPurchase";
-            this.btnPurchase.Size = new System.Drawing.Size(139, 23);
+            this.btnPurchase.Size = new System.Drawing.Size(131, 32);
             this.btnPurchase.TabIndex = 0;
             this.btnPurchase.Text = "결제";
             this.btnPurchase.UseVisualStyleBackColor = true;
@@ -50,9 +53,12 @@ namespace TrillionIce
             // 
             // btnCancel
             // 
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancel.ForeColor = System.Drawing.Color.DimGray;
             this.btnCancel.Location = new System.Drawing.Point(215, 423);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(89, 23);
+            this.btnCancel.Size = new System.Drawing.Size(89, 32);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -73,22 +79,25 @@ namespace TrillionIce
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("휴먼편지체", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.label1.Location = new System.Drawing.Point(38, 33);
+            this.label1.Location = new System.Drawing.Point(43, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 25);
+            this.label1.Size = new System.Drawing.Size(87, 30);
             this.label1.TabIndex = 3;
             this.label1.Text = "주문접수";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Font = new System.Drawing.Font("휴먼편지체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.label2.Location = new System.Drawing.Point(39, 99);
+            this.label2.Location = new System.Drawing.Point(43, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 23);
+            this.label2.Size = new System.Drawing.Size(84, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "장바구니";
             // 
