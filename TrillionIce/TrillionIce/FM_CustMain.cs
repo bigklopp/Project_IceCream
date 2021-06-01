@@ -46,6 +46,7 @@ namespace TrillionIce
             {
                 FM_SysMain SysMain = new FM_SysMain();
                 SysMain.ShowDialog();
+                this.Close();
             }
             else
             {

@@ -311,5 +311,40 @@ namespace DevForm
             }
 
         }
+
+        private void dgvItem_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string itemName = dgvItem.CurrentRow.Cells["ITEMNAME"].Value.ToString();
+
+            try
+            {
+                // 이미지 초기화
+                currentImage.Image = null;
+                string Sql = "SELECT ITEMIMG FROM TB_1_ITEM WHERE ITEMNAME = '" + itemName
+                              + "' AND ITEMIMG IS NOT NULL";
+                SqlDataAdapter Adapter = new SqlDataAdapter(Sql, Connect);
+                DataTable dtTemp = new DataTable();
+                Adapter.Fill(dtTemp);
+
+                if (dtTemp.Rows.Count == 0) return;
+
+                byte[] bImage = null;
+                bImage = (byte[])dtTemp.Rows[0]["ITEMIMG"]; // 이미지를 byte 화 한다.
+                if (bImage != null)
+                {
+                    currentImage.Image = new Bitmap(new MemoryStream(bImage)); // 메모리 스트림을 이용하여 파일을 그림 파일로 만든다.
+                    currentImage.BringToFront();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("다음과 같은 에러가 발생하였습니다 : " + ex.ToString());
+            }
+            finally
+            {
+                Connect.Close();
+            }
+        }
     }
 }
