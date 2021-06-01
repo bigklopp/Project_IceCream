@@ -52,6 +52,7 @@ namespace DevForm
             // 
             // btnOrderConfirm
             // 
+            this.btnOrderConfirm.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnOrderConfirm.Location = new System.Drawing.Point(535, 78);
             this.btnOrderConfirm.Name = "btnOrderConfirm";
             this.btnOrderConfirm.Size = new System.Drawing.Size(220, 91);
@@ -62,12 +63,14 @@ namespace DevForm
             // 
             // btnOrderCancel
             // 
+            this.btnOrderCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnOrderCancel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnOrderCancel.Location = new System.Drawing.Point(807, 78);
             this.btnOrderCancel.Name = "btnOrderCancel";
             this.btnOrderCancel.Size = new System.Drawing.Size(214, 91);
             this.btnOrderCancel.TabIndex = 2;
             this.btnOrderCancel.Text = "주문 취소";
-            this.btnOrderCancel.UseVisualStyleBackColor = true;
+            this.btnOrderCancel.UseVisualStyleBackColor = false;
             this.btnOrderCancel.Click += new System.EventHandler(this.btnOrderCancel_Click);
             // 
             // groupBox1
@@ -85,6 +88,7 @@ namespace DevForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1136, 778);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvGrid);
