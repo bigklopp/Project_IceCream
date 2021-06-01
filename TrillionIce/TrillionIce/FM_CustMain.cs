@@ -14,8 +14,8 @@ namespace TrillionIce
         public static string IdValidation = "FAIL";
 
         public static DataTable cartData = new DataTable();
-        public static DataColumn cartItem = new DataColumn("상품명", typeof(string));
-        public static DataColumn quantity = new DataColumn("수량", typeof(int));
+        public static DataColumn cartItem = new DataColumn("ITEMNAME", typeof(string));
+        public static DataColumn quantity = new DataColumn("QUANTITY", typeof(int));
 
         #region Connection Init
         private SqlConnection Conn = null;

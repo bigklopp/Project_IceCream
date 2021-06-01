@@ -17,10 +17,9 @@ namespace TrillionIce
         {
             InitializeComponent();
             dgvCart.DataSource = FM_CustMain.cartData;
-            Inquire();
         }
 
-        public void Inquire()
+        /*public void Inquire()
         {
             DBHelper helper = new DBHelper(false);
             try
@@ -43,7 +42,7 @@ namespace TrillionIce
 
                 dgvCart.Columns["USERID"].HeaderText = "고객 ID";
                 dgvCart.Columns["USERNAME"].HeaderText = "고객 이름";
-                dgvCart.Columns["ITEMNAME"].HeaderText = "품목";
+                dgvCart.Columns["columnName"].HeaderText = "품목";
                 dgvCart.Columns["QUANTITY"].HeaderText = "주문 수량";
                 dgvCart.Columns["ORDERDATE"].HeaderText = "주문 일시";
                 dgvCart.Columns["STOCK"].HeaderText = "재고";
@@ -55,7 +54,7 @@ namespace TrillionIce
                 // 컬럼의 수정 여부를 지정한다. 
                 dgvCart.Columns["USERID"].ReadOnly = true;
                 dgvCart.Columns["USERNAME"].ReadOnly = true;
-                dgvCart.Columns["ITEMNAME"].ReadOnly = true;
+                dgvCart.Columns["columnName"].ReadOnly = true;
                 dgvCart.Columns["QUANTITY"].ReadOnly = true;
                 dgvCart.Columns["ORDERDATE"].ReadOnly = true;
                 dgvCart.Columns["STOCK"].ReadOnly = true;
@@ -71,7 +70,7 @@ namespace TrillionIce
                 helper.Close();
             }
 
-        }
+        }*/
 
         public void Pay()
         {
@@ -97,14 +96,14 @@ namespace TrillionIce
                     for( int i = 0; i < dtTemp.Rows.Count; i++)
                     {
                     if (dtTemp.Rows[i] == null) return;
-                    string userId = "n";
-                    string itemName = dgvCart.Rows[i].Cells["ITEMNAME"].Value.ToString();
+                    string userId = Common.signInId;
+                    string columnName = dgvCart.Rows[i].Cells["ITEMNAME"].Value.ToString();
                     int quantity = int.Parse(dgvCart.Rows[i].Cells["QUANTITY"].Value.ToString());
                     dtTemp.Rows[i].RejectChanges();
                     helper.ExecuteNoneQuery("SP_ORDER_LHC_I1", CommandType.StoredProcedure
                         , helper.CreateParameter("USERID", userId)
                         , helper.CreateParameter("QUANTITY", quantity)
-                        , helper.CreateParameter("ITEMNAME", itemName));
+                        , helper.CreateParameter("ITEMNAME", columnName));
                     }
                 // 성공 시 DB Commit
                 helper.Commit();
