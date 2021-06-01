@@ -166,8 +166,8 @@ namespace TrillionIce
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(1386, 50);
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(1361, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 5;
@@ -186,7 +186,8 @@ namespace TrillionIce
             // 
             this.picImage.Location = new System.Drawing.Point(920, 51);
             this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(234, 269);
+            this.picImage.Size = new System.Drawing.Size(357, 348);
+            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImage.TabIndex = 4;
             this.picImage.TabStop = false;
             // 
