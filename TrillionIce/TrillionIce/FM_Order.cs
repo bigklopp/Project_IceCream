@@ -11,6 +11,10 @@ namespace TrillionIce
         {
             InitializeComponent();
             dgvCart.DataSource = FM_CustMain.cartData;
+
+            dgvCart.Columns["ITEMNAME"].HeaderText = "상품명";
+            dgvCart.Columns["QUANTITY"].HeaderText = "수량";
+
         }
 
         public void Pay()

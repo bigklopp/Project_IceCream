@@ -83,6 +83,8 @@ namespace TrillionIce
             // 
             // dgvCart
             // 
+            this.dgvCart.AllowUserToAddRows = false;
+            this.dgvCart.AllowUserToDeleteRows = false;
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCart.Location = new System.Drawing.Point(1365, 83);
             this.dgvCart.Name = "dgvCart";
@@ -193,6 +195,8 @@ namespace TrillionIce
             // 
             // dgvItem
             // 
+            this.dgvItem.AllowUserToAddRows = false;
+            this.dgvItem.AllowUserToDeleteRows = false;
             this.dgvItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItem.Location = new System.Drawing.Point(12, 51);
             this.dgvItem.Name = "dgvItem";
