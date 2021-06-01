@@ -114,7 +114,7 @@ namespace DevForm
 
             string itemCode = dgvItem.CurrentRow.Cells["ITEMCODE"].Value.ToString();
             string itemName = dgvItem.CurrentRow.Cells["ITEMNAME"].Value.ToString();
-            String stock = dgvItem.CurrentRow.Cells["STOCK"].Value.ToString();
+            string stock = dgvItem.CurrentRow.Cells["STOCK"].Value.ToString();
             SqlCommand cmd = new SqlCommand();
             SqlTransaction Tran;
 
