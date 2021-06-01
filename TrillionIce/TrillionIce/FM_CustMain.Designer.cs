@@ -48,6 +48,7 @@ namespace TrillionIce
             this.txtSearchItem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
@@ -99,6 +100,7 @@ namespace TrillionIce
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SeaShell;
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnPurchase);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
@@ -204,7 +206,7 @@ namespace TrillionIce
             // picImage
             // 
             this.picImage.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.picImage.Location = new System.Drawing.Point(940, 51);
+            this.picImage.Location = new System.Drawing.Point(937, 83);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(344, 336);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -289,6 +291,15 @@ namespace TrillionIce
             this.groupBox4.TabStop = false;
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(934, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 15);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "상품 이미지";
+            // 
             // FM_CustMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -335,6 +346,7 @@ namespace TrillionIce
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label5;
     }
 }
 
