@@ -41,6 +41,7 @@ namespace DevForm
             // 
             this.dgvGrid.AllowUserToAddRows = false;
             this.dgvGrid.AllowUserToDeleteRows = false;
+            this.dgvGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvGrid.Location = new System.Drawing.Point(0, 0);
@@ -59,7 +60,7 @@ namespace DevForm
             this.btnOrderConfirm.Name = "btnOrderConfirm";
             this.btnOrderConfirm.Size = new System.Drawing.Size(220, 91);
             this.btnOrderConfirm.TabIndex = 1;
-            this.btnOrderConfirm.Text = "주문 확정";
+            this.btnOrderConfirm.Text = "주문 확정 : )";
             this.btnOrderConfirm.UseVisualStyleBackColor = false;
             this.btnOrderConfirm.Click += new System.EventHandler(this.btnOrderConfirm_Click);
             // 
@@ -71,7 +72,7 @@ namespace DevForm
             this.btnOrderCancel.Name = "btnOrderCancel";
             this.btnOrderCancel.Size = new System.Drawing.Size(214, 91);
             this.btnOrderCancel.TabIndex = 2;
-            this.btnOrderCancel.Text = "주문 취소";
+            this.btnOrderCancel.Text = "주문 취소 : <";
             this.btnOrderCancel.UseVisualStyleBackColor = false;
             this.btnOrderCancel.Click += new System.EventHandler(this.btnOrderCancel_Click);
             // 

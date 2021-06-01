@@ -68,9 +68,10 @@ namespace TrillionIce
             // 
             this.dgvCart.AllowUserToAddRows = false;
             this.dgvCart.AllowUserToDeleteRows = false;
-            this.dgvCart.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCart.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvCart.Location = new System.Drawing.Point(43, 125);
             this.dgvCart.Name = "dgvCart";
             this.dgvCart.RowHeadersWidth = 51;

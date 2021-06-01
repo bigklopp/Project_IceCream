@@ -72,6 +72,8 @@ namespace TrillionIce
             // 
             // btnLogIn
             // 
+            this.btnLogIn.BackColor = System.Drawing.Color.MistyRose;
+            this.btnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogIn.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnLogIn.ForeColor = System.Drawing.Color.DimGray;
             this.btnLogIn.Location = new System.Drawing.Point(1591, 20);
@@ -79,13 +81,14 @@ namespace TrillionIce
             this.btnLogIn.Size = new System.Drawing.Size(91, 38);
             this.btnLogIn.TabIndex = 1;
             this.btnLogIn.Text = "로그인";
-            this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.UseVisualStyleBackColor = false;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // dgvCart
             // 
             this.dgvCart.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvCart.Location = new System.Drawing.Point(1365, 83);
             this.dgvCart.Name = "dgvCart";
             this.dgvCart.RowHeadersWidth = 51;
@@ -95,7 +98,7 @@ namespace TrillionIce
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.PeachPuff;
+            this.groupBox1.BackColor = System.Drawing.Color.SeaShell;
             this.groupBox1.Controls.Add(this.btnPurchase);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
@@ -115,6 +118,8 @@ namespace TrillionIce
             // 
             // btnPurchase
             // 
+            this.btnPurchase.BackColor = System.Drawing.Color.MistyRose;
+            this.btnPurchase.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPurchase.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPurchase.ForeColor = System.Drawing.Color.DimGray;
             this.btnPurchase.Location = new System.Drawing.Point(1450, 473);
@@ -122,11 +127,13 @@ namespace TrillionIce
             this.btnPurchase.Size = new System.Drawing.Size(169, 38);
             this.btnPurchase.TabIndex = 10;
             this.btnPurchase.Text = "구매";
-            this.btnPurchase.UseVisualStyleBackColor = true;
+            this.btnPurchase.UseVisualStyleBackColor = false;
             this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.MistyRose;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button2.ForeColor = System.Drawing.Color.DimGray;
             this.button2.Location = new System.Drawing.Point(1450, 400);
@@ -134,11 +141,13 @@ namespace TrillionIce
             this.button2.Size = new System.Drawing.Size(169, 40);
             this.button2.TabIndex = 9;
             this.button2.Text = "장바구니에서 삭제";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.MistyRose;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button1.ForeColor = System.Drawing.Color.DimGray;
             this.button1.Location = new System.Drawing.Point(1450, 358);
@@ -146,7 +155,7 @@ namespace TrillionIce
             this.button1.Size = new System.Drawing.Size(169, 41);
             this.button1.TabIndex = 8;
             this.button1.Text = "장바구니에 추가";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
@@ -206,6 +215,7 @@ namespace TrillionIce
             // 
             this.dgvItem.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvItem.Location = new System.Drawing.Point(25, 51);
             this.dgvItem.Name = "dgvItem";
             this.dgvItem.RowHeadersWidth = 51;
@@ -217,6 +227,7 @@ namespace TrillionIce
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.LemonChiffon;
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.txtSearchItem);
             this.groupBox2.Controls.Add(this.label1);
@@ -264,6 +275,7 @@ namespace TrillionIce
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.LemonChiffon;
             this.groupBox3.Controls.Add(this.richTextBox1);
             this.groupBox3.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox3.ForeColor = System.Drawing.Color.DimGray;
@@ -300,7 +312,7 @@ namespace TrillionIce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1712, 1004);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);

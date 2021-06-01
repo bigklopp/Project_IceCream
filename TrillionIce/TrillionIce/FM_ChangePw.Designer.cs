@@ -110,7 +110,7 @@ namespace TrillionIce
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("맑은 고딕", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.label1.Location = new System.Drawing.Point(112, 156);
+            this.label1.Location = new System.Drawing.Point(119, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 32);
             this.label1.TabIndex = 13;
@@ -119,7 +119,7 @@ namespace TrillionIce
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TrillionIce.Properties.Resources.icons8_fruit_ice_cream_cone_100;
-            this.pictureBox1.Location = new System.Drawing.Point(127, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(132, 46);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(93, 107);
             this.pictureBox1.TabIndex = 14;
