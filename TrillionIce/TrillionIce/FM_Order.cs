@@ -58,7 +58,8 @@ namespace TrillionIce
                 // 메세지
                 MessageBox.Show("정상적으로 주문되었습니다.");
                 dgvCart.DataSource = null;
-            }
+                FM_CustMain.cartData.Rows.Clear();
+                }
             catch (Exception ex)
             {
                 helper.Rollback();

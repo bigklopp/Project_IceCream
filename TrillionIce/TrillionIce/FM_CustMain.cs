@@ -70,6 +70,7 @@ namespace TrillionIce
             }
             FM_Order CustOrder = new FM_Order();
             CustOrder.ShowDialog();
+            dgvCart.DataSource = cartData;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

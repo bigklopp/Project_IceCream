@@ -34,10 +34,13 @@ namespace DevForm
                 // 조회를 위한 파라매터 설정
                 string itemCode = txtItemCode.Text;  // 품목 코드
                 string itemName = txtItemName.Text;  // 품목 명
-                string startStock= txtStart.Text;     // 재고수량  
-                string endStock = txtEnd.Text;       // 재고수량
-
-                string Sql = "SELECT ITEMCODE,  " +
+                string startStock= txtStart.Text; 
+                string endStock = txtEnd.Text;
+                if (startStock == string.Empty) startStock = "0";
+                if (endStock == string.Empty) endStock = "100000000";
+                
+              
+                    string Sql = "SELECT ITEMCODE,  " +
                              "       ITEMNAME,  " +
                              $"      STOCK,     " +
                              "       MAKEDATE,  " +
@@ -46,7 +49,8 @@ namespace DevForm
                              "       EDITOR     " +
                              "  FROM TB_1_ITEM WITH(NOLOCK) " +
                              " WHERE ITEMCODE LIKE '%" + itemCode + "%' " +
-                             "   AND ITEMNAME LIKE '%" + itemName + "%' ";
+                             "   AND ITEMNAME LIKE '%" + itemName + "%' " +
+                             "   AND STOCK BETWEEN '" + startStock + "' AND '" + endStock + "'";
 
                 SqlDataAdapter Adapter = new SqlDataAdapter(Sql, Connect);
 
@@ -110,7 +114,7 @@ namespace DevForm
 
             string itemCode = dgvItem.CurrentRow.Cells["ITEMCODE"].Value.ToString();
             string itemName = dgvItem.CurrentRow.Cells["ITEMNAME"].Value.ToString();
-
+            String stock = dgvItem.CurrentRow.Cells["STOCK"].Value.ToString();
             SqlCommand cmd = new SqlCommand();
             SqlTransaction Tran;
 
@@ -123,11 +127,12 @@ namespace DevForm
             cmd.CommandText = "UPDATE TB_1_ITEM                         " +
                               "    SET ITEMNAME  = '" + itemName + "',   " +
                               "        EDITOR = '" + Common.signInId + "',  " +
-                              "        EDITDATE = GETDATE()          " +
+                              "        EDITDATE = GETDATE()," +
+                              "        STOCK = CONVERT(INT,'" + stock + "')" +
                               "  WHERE ITEMCODE = '" + itemCode + "'" +
                               " IF (@@ROWCOUNT =0) " +
-                              "INSERT INTO TB_1_ITEM(ITEMCODE,  ITEMNAME,   MAKEDATE,   MAKER) " +
-                              "VALUES('" + itemCode + "','" + itemName + "'," +  "GETDATE(), '" + Common.signInId + "')";
+                              "INSERT INTO TB_1_ITEM(ITEMCODE,  ITEMNAME,   MAKEDATE,   MAKER, STOCK) " +
+                              "VALUES('" + itemCode + "','" + itemName + "'," +  "GETDATE(), '" + Common.signInId + "', '" + stock  + "')";
 
             cmd.ExecuteNonQuery();
 
