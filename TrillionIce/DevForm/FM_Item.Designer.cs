@@ -63,7 +63,7 @@ namespace DevForm
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(33, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 22);
+            this.label1.Size = new System.Drawing.Size(55, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "품목명";
             // 
@@ -72,7 +72,7 @@ namespace DevForm
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(332, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 22);
+            this.label2.Size = new System.Drawing.Size(70, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "품목코드";
             // 
@@ -81,7 +81,7 @@ namespace DevForm
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(646, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 22);
+            this.label3.Size = new System.Drawing.Size(70, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "재고수량";
             // 
@@ -90,7 +90,7 @@ namespace DevForm
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(770, 41);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(19, 22);
+            this.label4.Size = new System.Drawing.Size(21, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "~";
             // 
@@ -148,7 +148,7 @@ namespace DevForm
             this.groupBox1.Controls.Add(this.txtItemCode);
             this.groupBox1.Controls.Add(this.txtItemName);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -168,7 +168,7 @@ namespace DevForm
             this.dgvItem.Name = "dgvItem";
             this.dgvItem.RowHeadersWidth = 51;
             this.dgvItem.RowTemplate.Height = 27;
-            this.dgvItem.Size = new System.Drawing.Size(899, 476);
+            this.dgvItem.Size = new System.Drawing.Size(1017, 598);
             this.dgvItem.TabIndex = 10;
             this.dgvItem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItem_CellClick);
             // 
@@ -176,7 +176,7 @@ namespace DevForm
             // 
             this.picImage.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.picImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picImage.Location = new System.Drawing.Point(1291, 77);
+            this.picImage.Location = new System.Drawing.Point(1195, 376);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(305, 238);
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,11 +198,11 @@ namespace DevForm
             this.groupBox2.Controls.Add(this.picImage);
             this.groupBox2.Controls.Add(this.dgvItem);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox2.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox2.Location = new System.Drawing.Point(0, 105);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1626, 582);
+            this.groupBox2.Size = new System.Drawing.Size(1626, 815);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "상품 상세";
@@ -212,11 +212,11 @@ namespace DevForm
             // 
             this.label6.AutoSize = true;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Font = new System.Drawing.Font("휴먼편지체", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(965, 49);
+            this.label6.Location = new System.Drawing.Point(1195, 49);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 25);
+            this.label6.Size = new System.Drawing.Size(94, 27);
             this.label6.TabIndex = 18;
             this.label6.Text = "상품 이미지";
             // 
@@ -224,7 +224,7 @@ namespace DevForm
             // 
             this.currentImage.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.currentImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.currentImage.Location = new System.Drawing.Point(965, 77);
+            this.currentImage.Location = new System.Drawing.Point(1195, 77);
             this.currentImage.Name = "currentImage";
             this.currentImage.Size = new System.Drawing.Size(305, 238);
             this.currentImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -235,9 +235,9 @@ namespace DevForm
             // 
             this.btnPicDelete.BackColor = System.Drawing.Color.MistyRose;
             this.btnPicDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPicDelete.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnPicDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPicDelete.ForeColor = System.Drawing.Color.DimGray;
-            this.btnPicDelete.Location = new System.Drawing.Point(1535, 341);
+            this.btnPicDelete.Location = new System.Drawing.Point(1439, 640);
             this.btnPicDelete.Name = "btnPicDelete";
             this.btnPicDelete.Size = new System.Drawing.Size(61, 30);
             this.btnPicDelete.TabIndex = 17;
@@ -249,9 +249,9 @@ namespace DevForm
             // 
             this.btnPicSave.BackColor = System.Drawing.Color.MistyRose;
             this.btnPicSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPicSave.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnPicSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPicSave.ForeColor = System.Drawing.Color.DimGray;
-            this.btnPicSave.Location = new System.Drawing.Point(1465, 341);
+            this.btnPicSave.Location = new System.Drawing.Point(1369, 640);
             this.btnPicSave.Name = "btnPicSave";
             this.btnPicSave.Size = new System.Drawing.Size(64, 30);
             this.btnPicSave.TabIndex = 16;
@@ -263,9 +263,9 @@ namespace DevForm
             // 
             this.btnLoadPic.BackColor = System.Drawing.Color.MistyRose;
             this.btnLoadPic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLoadPic.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnLoadPic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnLoadPic.ForeColor = System.Drawing.Color.DimGray;
-            this.btnLoadPic.Location = new System.Drawing.Point(1291, 341);
+            this.btnLoadPic.Location = new System.Drawing.Point(1195, 640);
             this.btnLoadPic.Name = "btnLoadPic";
             this.btnLoadPic.Size = new System.Drawing.Size(150, 30);
             this.btnLoadPic.TabIndex = 15;
@@ -313,11 +313,11 @@ namespace DevForm
             // 
             this.label5.AutoSize = true;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Font = new System.Drawing.Font("휴먼편지체", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(1291, 49);
+            this.label5.Location = new System.Drawing.Point(1195, 348);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 25);
+            this.label5.Size = new System.Drawing.Size(94, 27);
             this.label5.TabIndex = 9;
             this.label5.Text = "이미지 추가";
             // 
@@ -325,7 +325,7 @@ namespace DevForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1626, 687);
+            this.ClientSize = new System.Drawing.Size(1626, 920);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

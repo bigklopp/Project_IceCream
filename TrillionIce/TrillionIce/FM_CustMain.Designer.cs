@@ -108,9 +108,9 @@ namespace TrillionIce
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lbItemName);
-            this.groupBox1.Controls.Add(this.picImage);
             this.groupBox1.Controls.Add(this.dgvItem);
             this.groupBox1.Controls.Add(this.dgvCart);
+            this.groupBox1.Controls.Add(this.picImage);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox1.Location = new System.Drawing.Point(0, 172);
             this.groupBox1.Name = "groupBox1";

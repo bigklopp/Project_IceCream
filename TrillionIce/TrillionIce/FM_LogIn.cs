@@ -59,7 +59,6 @@ namespace TrillionIce
             {
                 Common.signInId = txtUserId.Text;
                 Common.signInName = DtTemp.Rows[0]["USERNAME"].ToString();
-                string[] TagArray = new string[2] { "", "" };
                 Tag = DtTemp.Rows[0]["USERNAME"].ToString();
                 auth = DtTemp.Rows[0]["AUTH"].ToString();
                 Close();

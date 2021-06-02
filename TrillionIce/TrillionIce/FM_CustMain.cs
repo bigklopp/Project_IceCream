@@ -29,18 +29,26 @@ namespace TrillionIce
             cartData.Columns.Add(quantity);
             dgvCart.DataSource = cartData;
 
+
+            dgvCart.Columns[0].Width = 150;
+            dgvCart.Columns[1].Width = 75;
+
             dgvCart.Columns["ITEMNAME"].HeaderText = "상품명";
             dgvCart.Columns["QUANTITY"].HeaderText = "수량";
+            dgvCart.Columns["ITEMNAME"].ReadOnly = true;
+
         }
+
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
+            
             FM_LogIn LogIn = new FM_LogIn();
             LogIn.ShowDialog();
             IdValidation = LogIn.Tag.ToString();
             if (IdValidation == "FAIL")
             {
-                Environment.Exit(0);
+                return;
             }
             if (FM_LogIn.auth == "SYS")
             {

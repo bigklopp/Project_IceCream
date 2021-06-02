@@ -15,6 +15,13 @@ namespace TrillionIce
             dgvCart.Columns["ITEMNAME"].HeaderText = "상품명";
             dgvCart.Columns["QUANTITY"].HeaderText = "수량";
 
+
+            dgvCart.Columns[0].Width = 120;
+            dgvCart.Columns[1].Width = 55;
+
+            dgvCart.Columns["ITEMNAME"].ReadOnly = true;
+
+
         }
 
         public void Pay()
@@ -36,6 +43,7 @@ namespace TrillionIce
                     if (dtTemp.Rows[i]["QUANTITY"].ToString() == string.Empty)
                     {
                         MessageBox.Show("주문 수량을 입력해 주세요.");
+                        dgvCart.CurrentCell = dgvCart.Rows[i].Cells[1];
                         return;
                     }
 
