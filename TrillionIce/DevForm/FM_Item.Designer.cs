@@ -156,7 +156,6 @@ namespace DevForm
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "품목 검색";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dgvItem
             // 
@@ -206,7 +205,6 @@ namespace DevForm
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "상품 상세";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // label6
             // 
