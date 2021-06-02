@@ -15,6 +15,7 @@ namespace DevForm
         public FM_Item()
         {
             InitializeComponent();
+            btnSearch_Click(null, null);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
