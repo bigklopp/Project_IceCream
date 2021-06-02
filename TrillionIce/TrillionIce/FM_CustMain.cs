@@ -59,7 +59,9 @@ namespace TrillionIce
             {
                 lbUserName.Text = $"{IdValidation}님, 환영합니다!";
                 btnLogIn.Visible = false;
-                lbUserName.Location = new Point(1350, 28);
+                btnLogOut.Visible = true;
+                btnLogOut.Location = new Point(1400, 17);
+                lbUserName.Location = new Point(1220, 23);
             }
         }
 
@@ -193,6 +195,20 @@ namespace TrillionIce
             {
                 btnSearch_Click(sender, e);
             }
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("로그아웃 하시겠습니까?", "Logout", MessageBoxButtons.YesNo) == DialogResult.No) return;
+
+            lbUserName.Text = "구매하려면 로그인하세요";
+            lbUserName.Location = new Point(1210, 23);
+            btnLogIn.Visible = true;
+            btnLogOut.Visible = false;
+            IdValidation = "FAIL";
+            Common.signInId = "";
+            Common.signInName = "";
+            FM_LogIn.auth = "";
         }
     }
 }
