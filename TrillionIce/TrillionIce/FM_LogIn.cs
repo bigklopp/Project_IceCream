@@ -94,5 +94,13 @@ namespace TrillionIce
                 btnSignIn_Click(sender, e);
             }
         }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FM_SignUp SignUp = new FM_SignUp();
+            SignUp.ShowDialog();
+            Visible = true;
+        }
     }
 }

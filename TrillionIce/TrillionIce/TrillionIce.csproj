@@ -70,6 +70,12 @@
     <Compile Include="FM_Order.Designer.cs">
       <DependentUpon>FM_Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="FM_SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_SignUp.Designer.cs">
+      <DependentUpon>FM_SignUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="FM_SysMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FM_Order.resx">
       <DependentUpon>FM_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_SignUp.resx">
+      <DependentUpon>FM_SignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FM_SysMain.resx">
       <DependentUpon>FM_SysMain.cs</DependentUpon>

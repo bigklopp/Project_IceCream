@@ -36,6 +36,7 @@ namespace TrillionIce
             this.btnSignIn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSignUp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,16 +65,17 @@ namespace TrillionIce
             // 
             // btnChangePw
             // 
-            this.btnChangePw.BackColor = System.Drawing.Color.MistyRose;
+            this.btnChangePw.BackColor = System.Drawing.Color.Transparent;
             this.btnChangePw.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangePw.FlatAppearance.BorderSize = 0;
             this.btnChangePw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangePw.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnChangePw.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePw.ForeColor = System.Drawing.Color.DimGray;
-            this.btnChangePw.Location = new System.Drawing.Point(142, 435);
+            this.btnChangePw.Location = new System.Drawing.Point(165, 426);
             this.btnChangePw.Name = "btnChangePw";
-            this.btnChangePw.Size = new System.Drawing.Size(149, 30);
+            this.btnChangePw.Size = new System.Drawing.Size(126, 30);
             this.btnChangePw.TabIndex = 7;
-            this.btnChangePw.Text = "Change Password";
+            this.btnChangePw.Text = "비밀번호 변경";
             this.btnChangePw.UseVisualStyleBackColor = false;
             this.btnChangePw.Click += new System.EventHandler(this.btnChangePw_Click);
             // 
@@ -82,13 +84,13 @@ namespace TrillionIce
             this.btnSignIn.BackColor = System.Drawing.Color.MistyRose;
             this.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignIn.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSignIn.ForeColor = System.Drawing.Color.DimGray;
             this.btnSignIn.Location = new System.Drawing.Point(46, 385);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(245, 35);
             this.btnSignIn.TabIndex = 6;
-            this.btnSignIn.Text = "Sign in";
+            this.btnSignIn.Text = "로그인";
             this.btnSignIn.UseVisualStyleBackColor = false;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
@@ -112,12 +114,29 @@ namespace TrillionIce
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // btnSignUp
+            // 
+            this.btnSignUp.BackColor = System.Drawing.Color.Transparent;
+            this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignUp.FlatAppearance.BorderSize = 0;
+            this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.ForeColor = System.Drawing.Color.DimGray;
+            this.btnSignUp.Location = new System.Drawing.Point(46, 426);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(113, 30);
+            this.btnSignUp.TabIndex = 12;
+            this.btnSignUp.Text = "회원가입";
+            this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            // 
             // FM_LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(356, 521);
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPassword);
@@ -142,5 +161,6 @@ namespace TrillionIce
         private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSignUp;
     }
 }
