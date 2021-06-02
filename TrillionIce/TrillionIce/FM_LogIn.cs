@@ -51,6 +51,7 @@ namespace TrillionIce
                 if (pwFailCount == 3)
                 {
                     MessageBox.Show("실패 가능 횟수를 초과하였습니다.");
+                    pwFailCount = 0;
                     Close();
                 }
                 return;
