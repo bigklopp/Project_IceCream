@@ -12,13 +12,12 @@ namespace TrillionIce
     {
 
         public static string IdValidation = "FAIL";
+        private SqlConnection Conn = null;
+        private string ConnInfo = Common.db;
 
         public static DataTable cartData = new DataTable();
         public static DataColumn cartItem = new DataColumn("ITEMNAME", typeof(string));
         public static DataColumn quantity = new DataColumn("QUANTITY", typeof(int));
-
-        private SqlConnection Conn = null;
-        private string ConnInfo = Common.db;
 
         public FM_CustMain()
         {

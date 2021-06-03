@@ -18,7 +18,7 @@ namespace TrillionIce
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            SqlCommand Cmd = new SqlCommand();
+            /*SqlCommand Cmd = new SqlCommand();
             SqlTransaction Txn;
             Conn = new SqlConnection(ConnInfo);
             Conn.Open();
@@ -49,7 +49,46 @@ namespace TrillionIce
 
             MessageBox.Show("회원가입을 축하합니다. 가입한 계정으로 로그인해주세요");
             Conn.Close();
-            this.Close();
+            this.Close();*/
+
+            DBHelper helper = new DBHelper(false);
+
+
+            try
+            {
+
+                string userName = txtUserName.Text;
+                string userId = txtUserId.Text;
+                string password = txtPassword.Text;
+
+                if (userName == "" || userId == "" || password == "") { MessageBox.Show("모든 항목을 입력해주세요."); return; }
+                
+
+                DataTable dtTemp = new DataTable();
+                dtTemp = helper.FillTable("SP_T1_SIGNUP_S1", CommandType.StoredProcedure
+                               , helper.CreateParameter("USERID", userId));
+
+                if (dtTemp.Rows.Count != 0) { MessageBox.Show("등록된 아이디입니다 새로운 아이디를 입력하세요."); return; }
+
+                helper.ExecuteNoneQuery("SP_T1_SIGNUP_I1", CommandType.StoredProcedure
+                    , helper.CreateParameter("USERNAME", userName)
+                    , helper.CreateParameter("USERID", userId)
+                    , helper.CreateParameter("PW", password));
+                //helper.Commit();
+                MessageBox.Show("회원가입을 축하합니다. 가입한 계정으로 로그인해주세요");
+                this.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                //helper.Rollback();
+                MessageBox.Show("다음과 같은 에러가 발생하였습니다 : " + ex.ToString());
+            }
+            finally
+            {
+                helper.Close();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
