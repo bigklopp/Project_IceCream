@@ -16,24 +16,6 @@ namespace DevForm
             Init(includeTxn);
         }
 
-        public bool Init()
-        {
-            try
-            {
-                string conStr = Common.db;
-                // DbProviderFactories.RegisterFactory("System.Data.SqlClient", System.Data.SqlClient.SqlClientFactory.Instance);  
-                // 하위 버전에서는 활성화 : System.Data.SqlClient 형식의 Factory 사용 등록
-                dataFactory = DbProviderFactories.GetFactory("System.Data.SqlClient");   // 데이터 베이스 내용을 담아올 그릇의 DB 종류 선언   
-                _Conn = dataFactory.CreateConnection();                                  // 데이터베이스 연결 함수 DbConnection 과 FACTORY 연동
-                _Conn.ConnectionString = conStr;                                         // 연결 함수에 데이터베이스 주소 입력
-                _Conn.Open();
-            }
-            catch
-            {
-                return true;
-            }
-            return false;
-        }
         public bool Init(bool includeTxn)
         {
             try
