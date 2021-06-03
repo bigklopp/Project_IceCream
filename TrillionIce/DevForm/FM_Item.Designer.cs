@@ -63,7 +63,7 @@ namespace DevForm
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(33, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 24);
+            this.label1.Size = new System.Drawing.Size(53, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "품목명";
             // 
@@ -72,7 +72,7 @@ namespace DevForm
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(332, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 24);
+            this.label2.Size = new System.Drawing.Size(62, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "품목코드";
             // 
@@ -81,7 +81,7 @@ namespace DevForm
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(646, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 24);
+            this.label3.Size = new System.Drawing.Size(70, 22);
             this.label3.TabIndex = 2;
             this.label3.Text = "재고수량";
             // 
@@ -90,7 +90,7 @@ namespace DevForm
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(770, 41);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(21, 24);
+            this.label4.Size = new System.Drawing.Size(19, 22);
             this.label4.TabIndex = 3;
             this.label4.Text = "~";
             // 
@@ -148,7 +148,7 @@ namespace DevForm
             this.groupBox1.Controls.Add(this.txtItemCode);
             this.groupBox1.Controls.Add(this.txtItemName);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -198,7 +198,7 @@ namespace DevForm
             this.groupBox2.Controls.Add(this.picImage);
             this.groupBox2.Controls.Add(this.dgvItem);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox2.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox2.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox2.Location = new System.Drawing.Point(0, 105);
             this.groupBox2.Name = "groupBox2";

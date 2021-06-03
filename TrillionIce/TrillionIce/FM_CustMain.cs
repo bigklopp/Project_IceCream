@@ -210,5 +210,10 @@ namespace TrillionIce
             Common.signInName = "";
             FM_LogIn.auth = "";
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
