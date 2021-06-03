@@ -9,6 +9,7 @@ namespace DevForm
         public FM_OrderConfirm()
         {
             InitializeComponent();
+            Inquire();
         }
         public void Inquire()
         {
@@ -22,7 +23,7 @@ namespace DevForm
                 if (dtTemp.Rows.Count == 0)
                 {
                     dgvGrid.DataSource = null;
-                    MessageBox.Show("조회할 데이터가 없습니다.");
+                    MessageBox.Show("주문 내역이 없습니다.");
                     return;
                 }
                 else
@@ -41,6 +42,7 @@ namespace DevForm
                 dgvGrid.Columns["ORDERSEQ"].HeaderText = "주문 번호";
                 dgvGrid.Columns["ITEMCODE"].HeaderText = "품목 코드";
 
+                dgvGrid.Columns["ITEMNAME"].Width = 120;
                 dgvGrid.Columns[4].Width = 200;
 
                 // 컬럼의 수정 여부를 지정한다. 
@@ -67,7 +69,7 @@ namespace DevForm
         public void OrderCancel()
         {
                 if (dgvGrid.Rows.Count == 0) return;
-            if (MessageBox.Show("해당 구매 내역을 삭제하시겠습니까?", "데이터 삭제", MessageBoxButtons.YesNo)
+            if (MessageBox.Show("해당 구매 내역을 취소하시겠습니까?", "취소", MessageBoxButtons.YesNo)
             == DialogResult.No) return;
 
             string orderSeq = dgvGrid.CurrentRow.Cells["ORDERSEQ"].Value.ToString(); //선택된 셀
@@ -76,20 +78,20 @@ namespace DevForm
             string orderDate = dgvGrid.CurrentRow.Cells["ORDERDATE"].Value.ToString(); //선택된 셀
 
             DataTable dtTemp = (DataTable)dgvGrid.DataSource;
-                for (int i = 0; i < dtTemp.Rows.Count; i++)
+            for (int i = 0; i < dtTemp.Rows.Count; i++)
+            {
+                if (dtTemp.Rows[i].RowState == DataRowState.Deleted) continue; //지워진 상태이면 다음 행으로
+                if (dtTemp.Rows[i]["ORDERSEQ"].ToString() == orderSeq &&
+                    dtTemp.Rows[i]["USERID"].ToString() == userID &&
+                    dtTemp.Rows[i]["ITEMCODE"].ToString() == itemCode &&
+                    dtTemp.Rows[i]["ORDERDATE"].ToString() == orderDate) //선택된 셀의 UserID와 같으면
                 {
-                    if (dtTemp.Rows[i].RowState == DataRowState.Deleted) continue; //지워진 상태이면 다음 행으로
-                    if (dtTemp.Rows[i][6].ToString() == orderSeq &&
-                        dtTemp.Rows[i][0].ToString() == userID &&
-                        dtTemp.Rows[i][7].ToString() == itemCode &&
-                        dtTemp.Rows[i][4].ToString() == orderDate) //선택된 셀의 UserID와 같으면
-                    {
                     dtTemp.Rows[i].Delete();
-                        break;
-                    }
+                    break;
                 }
+            }
 
-            DataTable dtTempChange = ((DataTable)dgvGrid.DataSource).GetChanges();
+            DataTable dtTempChange = (DataTable)dgvGrid.DataSource;
             if (dtTempChange == null) return;
 
             DBHelper helper = new DBHelper(true);
@@ -119,7 +121,7 @@ namespace DevForm
                 // 성공 시 DB Commit
                 helper.Commit();
                 // 메세지
-                MessageBox.Show("정상적으로 삭제하였습니다.");
+                MessageBox.Show("정상적으로 취소하였습니다.");
                 // 재조회
                 Inquire();
 
@@ -128,7 +130,7 @@ namespace DevForm
             {
                 helper.Rollback();
 
-                MessageBox.Show("데이터 삭제에 실패하였습니다." + ex);
+                MessageBox.Show("주문 취소에 실패하였습니다." + ex);
             }
             finally
             {
@@ -140,22 +142,22 @@ namespace DevForm
         public void OrderConfirm()
         {
             if (dgvGrid.Rows.Count == 0) return;
-            if (MessageBox.Show("해당 구매 내역을 확정하시겠습니까?", "데이터 적용", MessageBoxButtons.YesNo)
+            if (MessageBox.Show("해당 구매 내역을 확정하시겠습니까?", "확정", MessageBoxButtons.YesNo)
             == DialogResult.No) return;
 
-            string orderSeq = dgvGrid.CurrentRow.Cells["ORDERSEQ"].Value.ToString(); 
-            string userID = dgvGrid.CurrentRow.Cells["USERID"].Value.ToString(); 
-            string itemCode = dgvGrid.CurrentRow.Cells["ITEMCODE"].Value.ToString(); 
-            string orderDate = dgvGrid.CurrentRow.Cells["ORDERDATE"].Value.ToString(); 
+            string orderSeq = dgvGrid.CurrentRow.Cells["ORDERSEQ"].Value.ToString();
+            string userID = dgvGrid.CurrentRow.Cells["USERID"].Value.ToString();
+            string itemCode = dgvGrid.CurrentRow.Cells["ITEMCODE"].Value.ToString();
+            string orderDate = dgvGrid.CurrentRow.Cells["ORDERDATE"].Value.ToString();
 
             DataTable dtTemp = (DataTable)dgvGrid.DataSource;
             for (int i = 0; i < dtTemp.Rows.Count; i++)
             {
                 if (dtTemp.Rows[i].RowState == DataRowState.Deleted) continue; //지워진 상태이면 다음 행으로
-                if (dtTemp.Rows[i][6].ToString() == orderSeq &&
-                    dtTemp.Rows[i][0].ToString() == userID &&
-                    dtTemp.Rows[i][7].ToString() == itemCode &&
-                    dtTemp.Rows[i][4].ToString() == orderDate) 
+                if (dtTemp.Rows[i]["ORDERSEQ"].ToString() == orderSeq &&
+                    dtTemp.Rows[i]["USERID"].ToString() == userID &&
+                    dtTemp.Rows[i]["ITEMCODE"].ToString() == itemCode &&
+                    dtTemp.Rows[i]["ORDERDATE"].ToString() == orderDate)
                 {
                     dtTemp.Rows[i].Delete();
                     break;
@@ -165,7 +167,7 @@ namespace DevForm
 
             int quantity;
 
-            DataTable dtTempChange = ((DataTable)dgvGrid.DataSource).GetChanges();
+            DataTable dtTempChange = (DataTable)dgvGrid.DataSource;
             if (dtTempChange == null) return;
 
             DBHelper helper = new DBHelper(true);
@@ -220,11 +222,13 @@ namespace DevForm
         private void btnOrderConfirm_Click(object sender, EventArgs e)
         {
             OrderConfirm();
+
         }
 
         private void btnOrderCancel_Click(object sender, EventArgs e)
         {
             OrderCancel();
+
         }
     }
 }
