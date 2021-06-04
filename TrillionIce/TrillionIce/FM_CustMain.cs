@@ -68,6 +68,7 @@ namespace TrillionIce
             {
                 MessageBox.Show("구매하려면 로그인하세요");
                 btnLogIn_Click(null, null);
+                btnPurchase_Click(null, null);
                 return;
             }
             if (cartData.Rows.Count == 0)

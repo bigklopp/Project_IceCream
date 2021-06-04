@@ -80,7 +80,7 @@ namespace TrillionIce
             this.btnCancel.BackColor = System.Drawing.Color.MistyRose;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancel.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCancel.ForeColor = System.Drawing.Color.DimGray;
             this.btnCancel.Location = new System.Drawing.Point(233, 464);
             this.btnCancel.Name = "btnCancel";
@@ -95,7 +95,7 @@ namespace TrillionIce
             this.btnChangePw.BackColor = System.Drawing.Color.MistyRose;
             this.btnChangePw.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangePw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangePw.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnChangePw.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnChangePw.ForeColor = System.Drawing.Color.DimGray;
             this.btnChangePw.Location = new System.Drawing.Point(63, 413);
             this.btnChangePw.Name = "btnChangePw";
