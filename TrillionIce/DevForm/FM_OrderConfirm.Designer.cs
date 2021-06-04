@@ -34,6 +34,7 @@ namespace DevForm
             this.btnOrderCancel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -80,6 +81,7 @@ namespace DevForm
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnOrderConfirm);
             this.groupBox1.Controls.Add(this.btnOrderCancel);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -101,6 +103,19 @@ namespace DevForm
             this.groupBox2.Size = new System.Drawing.Size(1136, 539);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MistyRose;
+            this.button1.Font = new System.Drawing.Font("휴먼편지체", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.ForeColor = System.Drawing.Color.DimGray;
+            this.button1.Location = new System.Drawing.Point(272, 78);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(220, 91);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "새로 고침";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FM_OrderConfirm
             // 
@@ -129,6 +144,7 @@ namespace DevForm
         private System.Windows.Forms.Button btnOrderCancel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

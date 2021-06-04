@@ -156,12 +156,15 @@ namespace DevForm
             if (MessageBox.Show("해당 구매 내역을 확정하시겠습니까?", "확정", MessageBoxButtons.YesNo)
             == DialogResult.No) return;
             if (dgvGrid.SelectedRows.Count == 0) { MessageBox.Show("주문 확정할 열을 모두 선택해주세요."); return; }
-
+            
+            
             string orderSeq;
             string userID;
             string itemCode;
             string orderDate;
-
+            int stock;
+            int quantity1;
+            
 
             DataTable dt = new DataTable();
             dt.Columns.Add("USERID");
@@ -176,48 +179,68 @@ namespace DevForm
             DBHelper helper = new DBHelper(true);
             try
             {
+                DataTable dtTemp = (DataTable)dgvGrid.DataSource;
+                int j = dtTemp.Rows.Count-1;
                 foreach (DataGridViewRow row in dgvGrid.SelectedRows)
                 {
+                    stock = int.Parse(row.Cells["STOCK"].Value.ToString());
+                    quantity1 = int.Parse(row.Cells["QUANTITY"].Value.ToString());
+                    if (stock < quantity1)
+                    {
+                        MessageBox.Show("재고가 부족합니다.");
+                        dgvGrid.CurrentCell = dgvGrid.Rows[j].Cells["STOCK"];
+
+                        return;
+                    }
+                    j--; 
+                }
+
+                foreach (DataGridViewRow row in dgvGrid.SelectedRows)
+                {
+                    
+
                     dt.Rows.Add(row);
                     orderSeq = row.Cells["ORDERSEQ"].Value.ToString();    //선택된 열
                     userID = row.Cells["USERID"].Value.ToString();        //선택된 열
                     itemCode = row.Cells["ITEMCODE"].Value.ToString();    //선택된 열
                     orderDate = row.Cells["ORDERDATE"].Value.ToString();  //선택된 열
+                    
+                    
 
-                    DataTable dtTemp = (DataTable)dgvGrid.DataSource;
-                for (int i = 0; i < dtTemp.Rows.Count; i++)
-                {
-                    if (dtTemp.Rows[i].RowState == DataRowState.Deleted) continue; //지워진 상태이면 다음 행으로
-                    if (dtTemp.Rows[i]["ORDERSEQ"].ToString() == orderSeq &&
-                        dtTemp.Rows[i]["USERID"].ToString() == userID &&
-                        dtTemp.Rows[i]["ITEMCODE"].ToString() == itemCode &&
-                        dtTemp.Rows[i]["ORDERDATE"].ToString() == orderDate)
+                    for (int i = dtTemp.Rows.Count - 1; i >= 0; i--)
                     {
-                        dtTemp.Rows[i].Delete();
-                        break;
-                    }
-                }
-                int quantity;
-                DataTable dtTempChange = (DataTable)dgvGrid.DataSource;
-                if (dtTempChange == null) return;
-                        foreach (DataRow drRow in dtTempChange.Rows)
+                        if (dtTemp.Rows[i].RowState == DataRowState.Deleted) continue; //지워진 상태이면 다음 행으로
+                        if (dtTemp.Rows[i]["ORDERSEQ"].ToString() == orderSeq &&
+                            dtTemp.Rows[i]["USERID"].ToString() == userID &&
+                            dtTemp.Rows[i]["ITEMCODE"].ToString() == itemCode &&
+                            dtTemp.Rows[i]["ORDERDATE"].ToString() == orderDate)
                         {
-                            if (drRow.RowState == DataRowState.Deleted)
-                            {
-                                drRow.RejectChanges();
-                                userID = drRow["USERID"].ToString();
-                                itemCode = drRow["ITEMCODE"].ToString();
-                                orderSeq = drRow["ORDERSEQ"].ToString();
-                                orderDate = drRow["ORDERDATE"].ToString();
-                                quantity = int.Parse(drRow["QUANTITY"].ToString());
-                                helper.ExecuteNoneQuery("SP_T1_ORDER_LHC_U1", CommandType.StoredProcedure
-                                    , helper.CreateParameter("USERID", userID)
-                                    , helper.CreateParameter("ITEMCODE", itemCode)
-                                    , helper.CreateParameter("ORDERSEQ", orderSeq)
-                                    , helper.CreateParameter("ORDERDATE", orderDate)
-                                    , helper.CreateParameter("QUANTITY", quantity));
-                            }
+                            dtTemp.Rows[i].Delete();
+                            break;
                         }
+                    }
+                    int quantity;
+                    DataTable dtTempChange = (DataTable)dgvGrid.DataSource;
+                    if (dtTempChange == null) return;
+                            foreach (DataRow drRow in dtTempChange.Rows)
+                            {
+                                if (drRow.RowState == DataRowState.Deleted)
+                                {
+                                    drRow.RejectChanges();
+                                    userID = drRow["USERID"].ToString();
+                                    itemCode = drRow["ITEMCODE"].ToString();
+                                    orderSeq = drRow["ORDERSEQ"].ToString();
+                                    orderDate = drRow["ORDERDATE"].ToString();
+                                    quantity = int.Parse(drRow["QUANTITY"].ToString());
+                                    helper.ExecuteNoneQuery("SP_T1_ORDER_LHC_U1", CommandType.StoredProcedure
+                                        , helper.CreateParameter("USERID", userID)
+                                        , helper.CreateParameter("ITEMCODE", itemCode)
+                                        , helper.CreateParameter("ORDERSEQ", orderSeq)
+                                        , helper.CreateParameter("ORDERDATE", orderDate)
+                                        , helper.CreateParameter("QUANTITY", quantity));
+                                }
+                            }
+                    
                 }
                 helper.Commit();
                 MessageBox.Show("정상적으로 반영하였습니다.");
@@ -247,6 +270,11 @@ namespace DevForm
         private void btnOrderCancel_Click(object sender, EventArgs e)
         {
             OrderCancel();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Inquire();
         }
     }
 }

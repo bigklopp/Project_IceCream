@@ -26,7 +26,7 @@ namespace DevForm
                 string itemName = txtItemName.Text; 
                 string startStock= txtStart.Text; 
                 string endStock = txtEnd.Text;
-                if (startStock == string.Empty) startStock = "0";
+                if (startStock == string.Empty) startStock = "-100000000";
                 if (endStock == string.Empty) endStock = "100000000";
 
                 DataTable dtTemp = new DataTable();
@@ -93,7 +93,7 @@ namespace DevForm
             DBHelper helper = new DBHelper(true);
             try
             {
-                helper.ExecuteNoneQuery("SP_ITEM_HYT_U1", CommandType.StoredProcedure
+                helper.ExecuteNoneQuery("SP_T1_ITEM_HYT_U1", CommandType.StoredProcedure
                                 , helper.CreateParameter("ITEMNAME", itemName)
                                 , helper.CreateParameter("ITEMCODE", itemCode)
                                 , helper.CreateParameter("SIGNINID", Common.signInId)
