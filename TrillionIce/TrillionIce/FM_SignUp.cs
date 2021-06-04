@@ -9,8 +9,7 @@ namespace TrillionIce
 {
     public partial class FM_SignUp : Form
     {
-        private SqlConnection Conn = null;
-        string ConnInfo = Common.db;
+        
         public FM_SignUp()
         {
             InitializeComponent();
@@ -18,7 +17,7 @@ namespace TrillionIce
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            SqlCommand Cmd = new SqlCommand();
+            /*SqlCommand Cmd = new SqlCommand();
             SqlTransaction Txn;
             Conn = new SqlConnection(ConnInfo);
             Conn.Open();
@@ -49,7 +48,56 @@ namespace TrillionIce
 
             MessageBox.Show("회원가입을 축하합니다. 가입한 계정으로 로그인해주세요");
             Conn.Close();
-            this.Close();
+            this.Close();*/
+
+            DBHelper helper1 = new DBHelper(false);
+
+            DBHelper helper2 = new DBHelper(true);
+
+
+
+            try
+            {
+
+                string userName = txtUserName.Text;
+                string userId = txtUserId.Text;
+                string password = txtPassword.Text;
+
+                if (userName == "" || userId == "" || password == "" || userName == "이름을 입력하세요" 
+                    || userId == " 사용할 아이디를 입력하세요" || password == " 사용할 패스워드를 입력하세요") 
+                { MessageBox.Show("모든 항목을 입력해주세요."); return; }
+                
+
+                DataTable dtTemp = new DataTable();
+                dtTemp = helper1.FillTable("SP_T1_SIGNUP_S1", CommandType.StoredProcedure
+                               , helper1.CreateParameter("USERID", userId));
+
+                if (dtTemp.Rows.Count != 0) { MessageBox.Show("등록된 아이디입니다 새로운 아이디를 입력하세요."); return; }
+
+                helper2.ExecuteNoneQuery("SP_T1_SIGNUP_I1", CommandType.StoredProcedure
+                    , helper2.CreateParameter("USERNAME", userName)
+                    , helper2.CreateParameter("USERID", userId)
+                    , helper2.CreateParameter("PW", password));
+                
+                helper2.Commit();
+                MessageBox.Show("회원가입을 축하합니다. 가입한 계정으로 로그인해주세요");
+                this.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                
+                helper2.Rollback();
+
+                MessageBox.Show("다음과 같은 에러가 발생하였습니다 : " + ex.ToString());
+            }
+            finally
+            {
+                
+                helper2.Close();
+
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

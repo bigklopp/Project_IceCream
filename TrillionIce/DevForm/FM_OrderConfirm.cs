@@ -11,14 +11,13 @@ namespace DevForm
             InitializeComponent();
             Inquire();
         }
-        public void Inquire()
+        public void Inquire() // SP_T1_ORDER_LHC_S1
         {
             DBHelper helper = new DBHelper(false);
             try
             {
-                
                 DataTable dtTemp = new DataTable();
-                dtTemp = helper.FillTable("SP_ORDER_LHC_S1", CommandType.StoredProcedure);
+                dtTemp = helper.FillTable("SP_T1_ORDER_LHC_S1", CommandType.StoredProcedure);
 
                 if (dtTemp.Rows.Count == 0)
                 {
@@ -30,8 +29,6 @@ namespace DevForm
                 {
                     dgvGrid.DataSource = dtTemp;
                 }
-               
-                
 
                 dgvGrid.Columns["USERID"].HeaderText = "고객 ID";
                 dgvGrid.Columns["USERNAME"].HeaderText = "고객 이름";
@@ -45,7 +42,6 @@ namespace DevForm
                 dgvGrid.Columns["ITEMNAME"].Width = 120;
                 dgvGrid.Columns[4].Width = 200;
 
-                // 컬럼의 수정 여부를 지정한다. 
                 dgvGrid.Columns["USERID"].ReadOnly = true;
                 dgvGrid.Columns["USERNAME"].ReadOnly = true;
                 dgvGrid.Columns["ITEMNAME"].ReadOnly = true;
@@ -57,49 +53,47 @@ namespace DevForm
             }
             catch (Exception ex)
             {
-                MessageBox.Show("예외 발생" + ex);
+                MessageBox.Show("다음과 같은 오류가 발생하였습니다 : " + ex);
             }
             finally
             {
                 helper.Close();
             }
-
         }
 
-        public void OrderCancel()
+        public void OrderCancel() // SP_T1_ORDER_LHC_D1
         {
-                if (dgvGrid.Rows.Count == 0) return;
+            if (dgvGrid.Rows.Count == 0) return;
             if (MessageBox.Show("해당 구매 내역을 취소하시겠습니까?", "취소", MessageBoxButtons.YesNo)
-            == DialogResult.No) return;
+                        == DialogResult.No) return;
 
-            string orderSeq = dgvGrid.CurrentRow.Cells["ORDERSEQ"].Value.ToString(); //선택된 셀
-            string userID = dgvGrid.CurrentRow.Cells["USERID"].Value.ToString(); //선택된 셀
-            string itemCode = dgvGrid.CurrentRow.Cells["ITEMCODE"].Value.ToString(); //선택된 셀
-            string orderDate = dgvGrid.CurrentRow.Cells["ORDERDATE"].Value.ToString(); //선택된 셀
+            string orderSeq = dgvGrid.CurrentRow.Cells["ORDERSEQ"].Value.ToString();    //선택된 셀
+            string userID = dgvGrid.CurrentRow.Cells["USERID"].Value.ToString();        //선택된 셀
+            string itemCode = dgvGrid.CurrentRow.Cells["ITEMCODE"].Value.ToString();    //선택된 셀
+            string orderDate = dgvGrid.CurrentRow.Cells["ORDERDATE"].Value.ToString();  //선택된 셀
 
             DataTable dtTemp = (DataTable)dgvGrid.DataSource;
             for (int i = 0; i < dtTemp.Rows.Count; i++)
             {
-                if (dtTemp.Rows[i].RowState == DataRowState.Deleted) continue; //지워진 상태이면 다음 행으로
+                if (dtTemp.Rows[i].RowState == DataRowState.Deleted) continue;  //지워진 상태이면 다음 행으로
                 if (dtTemp.Rows[i]["ORDERSEQ"].ToString() == orderSeq &&
                     dtTemp.Rows[i]["USERID"].ToString() == userID &&
                     dtTemp.Rows[i]["ITEMCODE"].ToString() == itemCode &&
-                    dtTemp.Rows[i]["ORDERDATE"].ToString() == orderDate) //선택된 셀의 UserID와 같으면
+                    dtTemp.Rows[i]["ORDERDATE"].ToString() == orderDate)        //선택된 셀의 UserID와 같으면
                 {
                     dtTemp.Rows[i].Delete();
                     break;
                 }
             }
 
+            
+
             DataTable dtTempChange = (DataTable)dgvGrid.DataSource;
             if (dtTempChange == null) return;
 
             DBHelper helper = new DBHelper(true);
-
             try
             {
-                
-
                 foreach (DataRow drRow in dtTempChange.Rows)
                 {
                     if (drRow.RowState == DataRowState.Deleted)
@@ -110,7 +104,7 @@ namespace DevForm
                         orderSeq = drRow["ORDERSEQ"].ToString();
                         orderDate = drRow["ORDERDATE"].ToString();
 
-                        helper.ExecuteNoneQuery("SP_ORDER_LHC_D1",
+                        helper.ExecuteNoneQuery("SP_T1_ORDER_LHC_D1",
                             CommandType.StoredProcedure, helper.CreateParameter("USERID", userID)
                             , helper.CreateParameter("ITEMCODE", itemCode)
                             , helper.CreateParameter("ORDERSEQ", orderSeq)
@@ -118,28 +112,22 @@ namespace DevForm
 
                     }
                 }
-                // 성공 시 DB Commit
                 helper.Commit();
-                // 메세지
                 MessageBox.Show("정상적으로 취소하였습니다.");
-                // 재조회
                 Inquire();
-
             }
             catch (Exception ex)
             {
                 helper.Rollback();
-
                 MessageBox.Show("주문 취소에 실패하였습니다." + ex);
             }
             finally
             {
                 helper.Close();
             }
-
         }
 
-        public void OrderConfirm()
+        public void OrderConfirm() // SP_T1_ORDER_LHC_U1
         {
             if (dgvGrid.Rows.Count == 0) return;
             if (MessageBox.Show("해당 구매 내역을 확정하시겠습니까?", "확정", MessageBoxButtons.YesNo)
@@ -164,14 +152,12 @@ namespace DevForm
                 }
             }
 
-
             int quantity;
 
             DataTable dtTempChange = (DataTable)dgvGrid.DataSource;
             if (dtTempChange == null) return;
 
             DBHelper helper = new DBHelper(true);
-
             try
             {
                 foreach (DataRow drRow in dtTempChange.Rows)
@@ -184,7 +170,7 @@ namespace DevForm
                             orderSeq = drRow["ORDERSEQ"].ToString();
                             orderDate = drRow["ORDERDATE"].ToString();
                             quantity = int.Parse(drRow["QUANTITY"].ToString());
-                            helper.ExecuteNoneQuery("SP_ORDER_LHC_U1", CommandType.StoredProcedure
+                            helper.ExecuteNoneQuery("SP_T1_ORDER_LHC_U1", CommandType.StoredProcedure
                                 , helper.CreateParameter("USERID", userID)
                                 , helper.CreateParameter("ITEMCODE", itemCode)
                                 , helper.CreateParameter("ORDERSEQ", orderSeq)
@@ -192,26 +178,19 @@ namespace DevForm
                                 , helper.CreateParameter("QUANTITY", quantity));
                         }
                 }
-                // 성공 시 DB Commit
                 helper.Commit();
-                // 메세지
                 MessageBox.Show("정상적으로 반영하였습니다.");
-                // 재조회
                 Inquire();
-
             }
             catch (Exception ex)
             {
                 helper.Rollback();
-
                 MessageBox.Show("주문 확정에 실패하였습니다." + ex);
             }
             finally
             {
                 helper.Close();
             }
-
-
         }
 
         private void FM_OrderConfirm_Load(object sender, EventArgs e)
@@ -222,13 +201,11 @@ namespace DevForm
         private void btnOrderConfirm_Click(object sender, EventArgs e)
         {
             OrderConfirm();
-
         }
 
         private void btnOrderCancel_Click(object sender, EventArgs e)
         {
             OrderCancel();
-
         }
     }
 }
