@@ -41,7 +41,7 @@ namespace TrillionIce
             // btnPurchase
             // 
             this.btnPurchase.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPurchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnPurchase.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPurchase.ForeColor = System.Drawing.Color.DimGray;
             this.btnPurchase.Location = new System.Drawing.Point(43, 423);
             this.btnPurchase.Name = "btnPurchase";
@@ -54,7 +54,7 @@ namespace TrillionIce
             // btnCancel
             // 
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancel.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCancel.ForeColor = System.Drawing.Color.DimGray;
             this.btnCancel.Location = new System.Drawing.Point(215, 423);
             this.btnCancel.Name = "btnCancel";
@@ -82,25 +82,24 @@ namespace TrillionIce
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("휴먼편지체", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.PaleVioletRed;
             this.label1.Location = new System.Drawing.Point(43, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 31);
+            this.label1.Size = new System.Drawing.Size(85, 28);
             this.label1.TabIndex = 3;
             this.label1.Text = "주문접수";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("휴먼편지체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.PaleVioletRed;
             this.label2.Location = new System.Drawing.Point(43, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 27);
+            this.label2.Size = new System.Drawing.Size(82, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "장바구니";
             // 

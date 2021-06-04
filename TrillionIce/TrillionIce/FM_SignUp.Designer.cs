@@ -62,7 +62,7 @@ namespace TrillionIce
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtPassword.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtPassword.Location = new System.Drawing.Point(63, 363);
             this.txtPassword.Name = "txtPassword";
@@ -74,7 +74,7 @@ namespace TrillionIce
             // 
             // txtUserId
             // 
-            this.txtUserId.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtUserId.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtUserId.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtUserId.Location = new System.Drawing.Point(62, 313);
             this.txtUserId.Name = "txtUserId";
@@ -86,13 +86,13 @@ namespace TrillionIce
             // txtUserName
             // 
             this.txtUserName.BackColor = System.Drawing.SystemColors.Window;
-            this.txtUserName.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtUserName.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtUserName.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtUserName.Location = new System.Drawing.Point(63, 263);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(245, 27);
             this.txtUserName.TabIndex = 17;
-            this.txtUserName.Text = "이름을 입력하세요";
+            this.txtUserName.Text = " 이름을 입력하세요";
             this.txtUserName.Enter += new System.EventHandler(this.txtUserName_Enter);
             // 
             // btnCancel
@@ -100,7 +100,7 @@ namespace TrillionIce
             this.btnCancel.BackColor = System.Drawing.Color.MistyRose;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCancel.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCancel.ForeColor = System.Drawing.Color.DimGray;
             this.btnCancel.Location = new System.Drawing.Point(233, 464);
             this.btnCancel.Name = "btnCancel";
@@ -115,7 +115,7 @@ namespace TrillionIce
             this.btnSignUp.BackColor = System.Drawing.Color.MistyRose;
             this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSignUp.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSignUp.ForeColor = System.Drawing.Color.DimGray;
             this.btnSignUp.Location = new System.Drawing.Point(63, 413);
             this.btnSignUp.Name = "btnSignUp";
