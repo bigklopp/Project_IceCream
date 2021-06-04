@@ -69,7 +69,7 @@ namespace TrillionIce
             this.btnChangePw.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangePw.FlatAppearance.BorderSize = 0;
             this.btnChangePw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangePw.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePw.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnChangePw.ForeColor = System.Drawing.Color.DimGray;
             this.btnChangePw.Location = new System.Drawing.Point(165, 426);
             this.btnChangePw.Name = "btnChangePw";
@@ -84,7 +84,7 @@ namespace TrillionIce
             this.btnSignIn.BackColor = System.Drawing.Color.MistyRose;
             this.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSignIn.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSignIn.ForeColor = System.Drawing.Color.DimGray;
             this.btnSignIn.Location = new System.Drawing.Point(46, 385);
             this.btnSignIn.Name = "btnSignIn";
@@ -120,7 +120,7 @@ namespace TrillionIce
             this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignUp.FlatAppearance.BorderSize = 0;
             this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.Font = new System.Drawing.Font("휴먼편지체", 10.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSignUp.ForeColor = System.Drawing.Color.DimGray;
             this.btnSignUp.Location = new System.Drawing.Point(46, 426);
             this.btnSignUp.Name = "btnSignUp";
