@@ -33,17 +33,19 @@ namespace TrillionIce
             DataTable cartData = new DataTable();
             cartData = (DataTable)dgvCart.DataSource;*/
 
+            for (int i = 0; i < dtTemp.Rows.Count; i++)
+            {
+                if (dtTemp.Rows[i]["QUANTITY"].ToString() == string.Empty)
+                {
+                    MessageBox.Show("주문 수량을 입력해 주세요.");
+                    dgvCart.CurrentCell = dgvCart.Rows[i].Cells[1];
+                    return;
+                }
+            }
+
             try
             {
-                for (int i = 0; i < dtTemp.Rows.Count; i++)
-                {
-                    if (dtTemp.Rows[i]["QUANTITY"].ToString() == string.Empty)
-                    {
-                        MessageBox.Show("주문 수량을 입력해 주세요.");
-                        dgvCart.CurrentCell = dgvCart.Rows[i].Cells[1];
-                        return;
-                    }
-                }
+                
 
                 for (int i = 0; i < dtTemp.Rows.Count; i++)
                 {

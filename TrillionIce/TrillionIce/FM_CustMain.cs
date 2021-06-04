@@ -196,9 +196,5 @@ namespace TrillionIce
             FM_LogIn.auth = "";
         }
 
-        private void dgvCart_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            button2_Click(null, null);
-        }
     }
 }
