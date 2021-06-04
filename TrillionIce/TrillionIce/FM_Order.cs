@@ -29,29 +29,26 @@ namespace TrillionIce
 
             DataTable dtTemp = (DataTable)dgvCart.DataSource;
             if (dtTemp == null) return;
-            DBHelper helper = new DBHelper(true);/*
-            DataTable cartData = new DataTable();
-            cartData = (DataTable)dgvCart.DataSource;*/
+            DBHelper helper = new DBHelper(true);
+
+            for (int i = 0; i < dtTemp.Rows.Count; i++)
+            {
+                if (dtTemp.Rows[i]["QUANTITY"].ToString() == string.Empty)
+                {
+                    MessageBox.Show("주문 수량을 입력해 주세요.");
+                    dgvCart.CurrentCell = dgvCart.Rows[i].Cells[1];
+                    return;
+                }
+            }
 
             try
             {
                 for (int i = 0; i < dtTemp.Rows.Count; i++)
                 {
-                    if (dtTemp.Rows[i]["QUANTITY"].ToString() == string.Empty)
-                    {
-                        MessageBox.Show("주문 수량을 입력해 주세요.");
-                        dgvCart.CurrentCell = dgvCart.Rows[i].Cells[1];
-                        return;
-                    }
-                }
-
-                for (int i = 0; i < dtTemp.Rows.Count; i++)
-                {
-                    //if (dtTemp.Rows[i] == null) return;
                     string userId = Common.signInId;
                     string columnName = dgvCart.Rows[i].Cells["ITEMNAME"].Value.ToString();
                     int quantity = int.Parse(dgvCart.Rows[i].Cells["QUANTITY"].Value.ToString());
-                    //dtTemp.Rows[i].RejectChanges();
+                    
                     helper.ExecuteNoneQuery("SP_T1_ORDER_LHC_I1", CommandType.StoredProcedure
                         , helper.CreateParameter("USERID", userId)
                         , helper.CreateParameter("QUANTITY", quantity)
@@ -83,11 +80,6 @@ namespace TrillionIce
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

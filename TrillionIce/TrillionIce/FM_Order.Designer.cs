@@ -90,7 +90,6 @@ namespace TrillionIce
             this.label1.Size = new System.Drawing.Size(85, 28);
             this.label1.TabIndex = 3;
             this.label1.Text = "주문접수";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 

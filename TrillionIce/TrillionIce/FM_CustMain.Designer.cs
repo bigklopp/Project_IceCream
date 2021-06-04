@@ -255,6 +255,7 @@ namespace TrillionIce
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "품목 검색";
+           
             // 
             // btnSearch
             // 
