@@ -97,7 +97,6 @@ namespace TrillionIce
             this.dgvCart.RowTemplate.Height = 27;
             this.dgvCart.Size = new System.Drawing.Size(321, 269);
             this.dgvCart.TabIndex = 2;
-            this.dgvCart.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCart_CellDoubleClick);
             // 
             // groupBox1
             // 
