@@ -27,6 +27,10 @@ namespace TrillionIce
             string currentPw = txtCurrentPw.Text;
             string newPw = txtNewPw.Text;
 
+            if (userId == "" || currentPw == "" || newPw == "" || userId == " Userid"
+                    || currentPw == " Current Password" || newPw == " New Password")
+            { MessageBox.Show("모든 항목을 입력해주세요."); return; }
+
             DBHelper helper1 = new DBHelper(false);
             DataTable dtTemp = helper1.FillTable("SP_T1_USER_HYT_S2", CommandType.StoredProcedure
                             , helper1.CreateParameter("USERID", userId));

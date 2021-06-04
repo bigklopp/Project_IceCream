@@ -23,6 +23,10 @@ namespace TrillionIce
             string userId = txtUserId.Text;
             string password = txtPassword.Text;
 
+            if (userId == "" || password == "" || userId == " Userid"
+                    || password == " Password")
+            { MessageBox.Show("모든 항목을 입력해주세요."); return; }
+
             DBHelper helper = new DBHelper(false);
             DataTable dtTemp = helper.FillTable("SP_T1_USER_HYT_S1", CommandType.StoredProcedure
                             , helper.CreateParameter("USERID", userId));
