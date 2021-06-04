@@ -50,6 +50,7 @@ namespace TrillionIce
             this.txtNewPw.TabIndex = 12;
             this.txtNewPw.Text = " New Password";
             this.txtNewPw.Enter += new System.EventHandler(this.txtNewPw_Enter);
+            this.txtNewPw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNewPw_KeyDown);
             // 
             // txtCurrentPw
             // 

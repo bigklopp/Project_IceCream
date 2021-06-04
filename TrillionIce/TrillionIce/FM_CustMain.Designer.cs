@@ -97,6 +97,7 @@ namespace TrillionIce
             this.dgvCart.RowTemplate.Height = 27;
             this.dgvCart.Size = new System.Drawing.Size(321, 269);
             this.dgvCart.TabIndex = 2;
+            this.dgvCart.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCart_CellDoubleClick);
             // 
             // groupBox1
             // 
@@ -256,7 +257,7 @@ namespace TrillionIce
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "품목 검색";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            
             // 
             // btnSearch
             // 
