@@ -30,7 +30,7 @@ namespace DevForm
                 if (endStock == string.Empty) endStock = "100000000";
 
                 DataTable dtTemp = new DataTable();
-                dtTemp = helper.FillTable("SP_ITEM_HYT_S1", CommandType.StoredProcedure
+                dtTemp = helper.FillTable("SP_T1_ITEM_HYT_S1", CommandType.StoredProcedure
                                 , helper.CreateParameter("ITEMCODE", itemCode)
                                 , helper.CreateParameter("ITEMNAME", itemName)
                                 , helper.CreateParameter("STARTSTOCK", startStock)
@@ -123,7 +123,7 @@ namespace DevForm
             try
             {
                 string itemCode = dgvItem.CurrentRow.Cells["ITEMCODE"].Value.ToString();
-                helper.ExecuteNoneQuery("SP_ITEM_HYT_D1", CommandType.StoredProcedure
+                helper.ExecuteNoneQuery("SP_T1_ITEM_HYT_D1", CommandType.StoredProcedure
                             , helper.CreateParameter("ITEMCODE", itemCode));
 
                 helper.Commit();
@@ -181,7 +181,7 @@ namespace DevForm
                 stream.Close();                                                                               // 스트림 리더를 종료한다.
                 string itemCode = dgvItem.CurrentRow.Cells["ITEMCODE"].Value.ToString();
 
-                helper.ExecuteNoneQuery("SP_IIMG_HYT_U1", CommandType.StoredProcedure
+                helper.ExecuteNoneQuery("SP_T1_IIMG_HYT_U1", CommandType.StoredProcedure
                     , helper.CreateParameter("ITEMCODE", itemCode)
                     , helper.CreateParameter("ITEMIMG", bImage));
                 helper.Commit();
@@ -209,7 +209,7 @@ namespace DevForm
             try
             {
                 string itemCode = dgvItem.CurrentRow.Cells["ITEMCODE"].Value.ToString();
-                helper.ExecuteNoneQuery("SP_IIMG_HYT_D1", CommandType.StoredProcedure
+                helper.ExecuteNoneQuery("SP_T1_IIMG_HYT_D1", CommandType.StoredProcedure
                     , helper.CreateParameter("ITEMCODE", itemCode));
                 helper.Commit();
                 picImage.Image = null;
@@ -237,7 +237,7 @@ namespace DevForm
                 string itemCode = dgvItem.CurrentRow.Cells["ITEMCODE"].Value.ToString();
 
                 DataTable dtTemp = new DataTable();
-                dtTemp = helper.FillTable("SP_IIMG_HYT_S1", CommandType.StoredProcedure
+                dtTemp = helper.FillTable("SP_T1_IIMG_HYT_S1", CommandType.StoredProcedure
                                 , helper.CreateParameter("ITEMCODE", itemCode));
 
                 if (dtTemp.Rows.Count == 0) return;
