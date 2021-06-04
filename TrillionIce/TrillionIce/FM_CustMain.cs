@@ -12,8 +12,6 @@ namespace TrillionIce
     {
 
         public static string IdValidation = "FAIL";
-        private SqlConnection Conn = null;
-        private string ConnInfo = Common.db;
 
         public static DataTable cartData = new DataTable();
         public static DataColumn cartItem = new DataColumn("ITEMNAME", typeof(string));
@@ -82,33 +80,24 @@ namespace TrillionIce
             dgvCart.DataSource = cartData;
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e) // SP_T1_CUST_HYT_S1
         {
+            DBHelper helper = new DBHelper(false);
             try
             {
-                Conn = new SqlConnection(ConnInfo);
-                Conn.Open();
-
-                if (Conn.State != System.Data.ConnectionState.Open)
-                {
-                    MessageBox.Show("DB 연결에 실패하였습니다.");
-                    return;
-                }
-
                 string itemName = txtSearchItem.Text;
 
-                SqlDataAdapter Adapter = new SqlDataAdapter("SELECT ITEMNAME, DESCRIPTION FROM TB_1_ITEM WITH(NOLOCK) " +
-                                                           $"WHERE ITEMNAME LIKE '%{itemName}%' ", Conn);
-                DataTable DtTemp = new DataTable();
-                Adapter.Fill(DtTemp);
+                DataTable dtTemp = new DataTable();
+                dtTemp = helper.FillTable("SP_T1_CUST_HYT_S1", CommandType.StoredProcedure
+                                , helper.CreateParameter("ITEMNAME", itemName));
 
-                if (DtTemp.Rows.Count == 0)
+                if (dtTemp.Rows.Count == 0)
                 {
                     MessageBox.Show("검색 조건에 맞는 데이터가 없습니다.");
                     dgvItem.DataSource = null;
                     return;
                 }
-                dgvItem.DataSource = DtTemp;
+                dgvItem.DataSource = dtTemp;
 
                 dgvItem.Columns["ITEMNAME"].HeaderText = "상품명";
                 dgvItem.Columns["DESCRIPTION"].HeaderText = "상품설명";
@@ -125,23 +114,21 @@ namespace TrillionIce
             }
             finally
             {
-                Conn.Close();
+                helper.Close();
             }
         }
 
-        private void dgvItem_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvItem_CellClick(object sender, DataGridViewCellEventArgs e) // SP_T1_CIMG_HYT_S1
         {
-            string itemName = dgvItem.CurrentRow.Cells["ITEMNAME"].Value.ToString();
-            
+            picImage.Image = null;
+            DBHelper helper = new DBHelper(false);
             try
             {
-                // 이미지 초기화
-                picImage.Image = null;
-                string Sql = "SELECT ITEMIMG FROM TB_1_ITEM WHERE ITEMNAME = '" + itemName
-                              + "' AND ITEMIMG IS NOT NULL";
-                SqlDataAdapter Adapter = new SqlDataAdapter(Sql, Conn);
+                string itemName = dgvItem.CurrentRow.Cells["ITEMNAME"].Value.ToString();
+
                 DataTable dtTemp = new DataTable();
-                Adapter.Fill(dtTemp);
+                dtTemp = helper.FillTable("SP_T1_CIMG_HYT_S1", CommandType.StoredProcedure
+                                , helper.CreateParameter("ITEMNAME", itemName));
 
                 if (dtTemp.Rows.Count == 0) return;
 
@@ -152,7 +139,6 @@ namespace TrillionIce
                     picImage.Image = new Bitmap(new MemoryStream(bImage)); // 메모리 스트림을 이용하여 파일을 그림 파일로 만든다.
                     picImage.BringToFront();
                 }
-
             }
             catch (Exception ex)
             {
@@ -160,7 +146,7 @@ namespace TrillionIce
             }
             finally
             {
-                Conn.Close();
+                helper.Close();
             }
         }
 

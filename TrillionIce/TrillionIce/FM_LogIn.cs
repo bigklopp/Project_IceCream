@@ -9,8 +9,6 @@ namespace TrillionIce
 {
     public partial class FM_LogIn : Form
     {
-        private SqlConnection Conn = null;
-        string ConnInfo = Common.db;
         public static string auth = "";
         int pwFailCount = 0;
 
@@ -20,31 +18,21 @@ namespace TrillionIce
             Tag = "FAIL";
         }
 
-        private void btnSignIn_Click(object sender, EventArgs e)
+        private void btnSignIn_Click(object sender, EventArgs e) // SP_T1_USER_HYT_S1
         {
-            Conn = new SqlConnection(ConnInfo);
-            Conn.Open();
-
-            if (Conn.State != ConnectionState.Open)
-            {
-                MessageBox.Show("DB 연결에 실패하였습니다.");
-                return;
-            }
-
             string userId = txtUserId.Text;
             string password = txtPassword.Text;
 
-            SqlDataAdapter Adapter = new SqlDataAdapter(
-                $"SELECT USERNAME, PW, AUTH FROM TB_1_USER WHERE USERID = '{userId}'", Conn);
-            DataTable DtTemp = new DataTable();
-            Adapter.Fill(DtTemp);
+            DBHelper helper = new DBHelper(false);
+            DataTable dtTemp = helper.FillTable("SP_T1_USER_HYT_S1", CommandType.StoredProcedure
+                            , helper.CreateParameter("USERID", userId));
 
-            if (DtTemp.Rows.Count == 0)
+            if (dtTemp.Rows.Count == 0)
             {
                 MessageBox.Show("등록되지 않은 아이디입니다.");
                 return;
             }
-            else if (DtTemp.Rows[0]["PW"].ToString() != password)
+            else if (dtTemp.Rows[0]["PW"].ToString() != password)
             {
                 MessageBox.Show("비밀번호가 일치하지 않습니다.");
                 pwFailCount++;
@@ -59,11 +47,12 @@ namespace TrillionIce
             else
             {
                 Common.signInId = txtUserId.Text;
-                Common.signInName = DtTemp.Rows[0]["USERNAME"].ToString();
-                Tag = DtTemp.Rows[0]["USERNAME"].ToString();
-                auth = DtTemp.Rows[0]["AUTH"].ToString();
+                Common.signInName = dtTemp.Rows[0]["USERNAME"].ToString();
+                Tag = dtTemp.Rows[0]["USERNAME"].ToString();
+                auth = dtTemp.Rows[0]["AUTH"].ToString();
                 Close();
             }
+            helper.Close();
         }
 
         private void btnChangePw_Click(object sender, EventArgs e)
