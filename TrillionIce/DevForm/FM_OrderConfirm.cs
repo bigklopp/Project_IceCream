@@ -86,6 +86,13 @@ namespace DevForm
                 }
             }
 
+            DataTable dt = new DataTable();
+
+            foreach ( DataGridViewSelectedRowCollection row in dgvGrid.SelectedRows)
+            {
+                dt.Rows.Add(row);
+            }
+
             DataTable dtTempChange = (DataTable)dgvGrid.DataSource;
             if (dtTempChange == null) return;
 

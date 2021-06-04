@@ -42,8 +42,8 @@ namespace TrillionIce
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbItemName = new System.Windows.Forms.Label();
-            this.picImage = new System.Windows.Forms.PictureBox();
             this.dgvItem = new System.Windows.Forms.DataGridView();
+            this.picImage = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearchItem = new System.Windows.Forms.TextBox();
@@ -52,8 +52,8 @@ namespace TrillionIce
             this.btnLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +97,7 @@ namespace TrillionIce
             this.dgvCart.RowTemplate.Height = 27;
             this.dgvCart.Size = new System.Drawing.Size(321, 269);
             this.dgvCart.TabIndex = 2;
+            this.dgvCart.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCart_CellDoubleClick);
             // 
             // groupBox1
             // 
@@ -216,16 +217,6 @@ namespace TrillionIce
             this.lbItemName.Size = new System.Drawing.Size(0, 20);
             this.lbItemName.TabIndex = 4;
             // 
-            // picImage
-            // 
-            this.picImage.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.picImage.Location = new System.Drawing.Point(937, 83);
-            this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(344, 336);
-            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImage.TabIndex = 4;
-            this.picImage.TabStop = false;
-            // 
             // dgvItem
             // 
             this.dgvItem.AllowUserToAddRows = false;
@@ -241,6 +232,16 @@ namespace TrillionIce
             this.dgvItem.TabIndex = 4;
             this.dgvItem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItem_CellClick);
             this.dgvItem.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItem_CellDoubleClick);
+            // 
+            // picImage
+            // 
+            this.picImage.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.picImage.Location = new System.Drawing.Point(937, 83);
+            this.picImage.Name = "picImage";
+            this.picImage.Size = new System.Drawing.Size(344, 336);
+            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImage.TabIndex = 4;
+            this.picImage.TabStop = false;
             // 
             // groupBox2
             // 
@@ -335,8 +336,8 @@ namespace TrillionIce
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
