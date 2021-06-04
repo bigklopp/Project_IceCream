@@ -46,11 +46,11 @@ namespace DevForm
             this.dgvGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvGrid.Location = new System.Drawing.Point(3, 21);
+            this.dgvGrid.Location = new System.Drawing.Point(3, 23);
             this.dgvGrid.Name = "dgvGrid";
             this.dgvGrid.RowHeadersWidth = 51;
             this.dgvGrid.RowTemplate.Height = 27;
-            this.dgvGrid.Size = new System.Drawing.Size(1130, 515);
+            this.dgvGrid.Size = new System.Drawing.Size(1130, 513);
             this.dgvGrid.TabIndex = 0;
             // 
             // btnOrderConfirm
@@ -83,6 +83,7 @@ namespace DevForm
             this.groupBox1.Controls.Add(this.btnOrderConfirm);
             this.groupBox1.Controls.Add(this.btnOrderCancel);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox1.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(0, 539);
             this.groupBox1.Name = "groupBox1";
@@ -94,6 +95,7 @@ namespace DevForm
             // 
             this.groupBox2.Controls.Add(this.dgvGrid);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1136, 539);

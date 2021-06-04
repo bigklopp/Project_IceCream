@@ -209,12 +209,11 @@ namespace DevForm
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Font = new System.Drawing.Font("휴먼편지체", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
             this.label6.Location = new System.Drawing.Point(1195, 49);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 27);
+            this.label6.Size = new System.Drawing.Size(104, 23);
             this.label6.TabIndex = 18;
             this.label6.Text = "상품 이미지";
             // 
@@ -233,7 +232,7 @@ namespace DevForm
             // 
             this.btnPicDelete.BackColor = System.Drawing.Color.MistyRose;
             this.btnPicDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPicDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnPicDelete.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPicDelete.ForeColor = System.Drawing.Color.DimGray;
             this.btnPicDelete.Location = new System.Drawing.Point(1439, 640);
             this.btnPicDelete.Name = "btnPicDelete";
@@ -247,7 +246,7 @@ namespace DevForm
             // 
             this.btnPicSave.BackColor = System.Drawing.Color.MistyRose;
             this.btnPicSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPicSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnPicSave.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPicSave.ForeColor = System.Drawing.Color.DimGray;
             this.btnPicSave.Location = new System.Drawing.Point(1369, 640);
             this.btnPicSave.Name = "btnPicSave";
@@ -261,7 +260,7 @@ namespace DevForm
             // 
             this.btnLoadPic.BackColor = System.Drawing.Color.MistyRose;
             this.btnLoadPic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLoadPic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnLoadPic.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnLoadPic.ForeColor = System.Drawing.Color.DimGray;
             this.btnLoadPic.Location = new System.Drawing.Point(1195, 640);
             this.btnLoadPic.Name = "btnLoadPic";
@@ -310,12 +309,11 @@ namespace DevForm
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Font = new System.Drawing.Font("휴먼편지체", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
             this.label5.Location = new System.Drawing.Point(1195, 348);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 27);
+            this.label5.Size = new System.Drawing.Size(104, 23);
             this.label5.TabIndex = 9;
             this.label5.Text = "이미지 추가";
             // 

@@ -113,6 +113,7 @@ namespace TrillionIce
             this.groupBox1.Controls.Add(this.dgvCart);
             this.groupBox1.Controls.Add(this.picImage);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox1.Font = new System.Drawing.Font("휴먼편지체", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.Location = new System.Drawing.Point(0, 172);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1712, 832);
@@ -254,7 +255,6 @@ namespace TrillionIce
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "품목 검색";
-           
             // 
             // btnSearch
             // 
@@ -297,6 +297,7 @@ namespace TrillionIce
             this.groupBox4.Controls.Add(this.btnLogIn);
             this.groupBox4.Controls.Add(this.groupBox2);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox4.Font = new System.Drawing.Font("휴먼편지체", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1712, 149);

@@ -68,6 +68,7 @@ namespace TrillionIce
             {
                 MessageBox.Show("구매하려면 로그인하세요");
                 btnLogIn_Click(null, null);
+                btnPurchase_Click(null, null);
                 return;
             }
             if (cartData.Rows.Count == 0)
@@ -165,7 +166,7 @@ namespace TrillionIce
                 MessageBox.Show("장바구니에 품목이 없습니다.");
                 return;
             }
-            //if (MessageBox.Show("장바구니에서 삭제하시겠습니까?", "Delete", MessageBoxButtons.YesNo) == DialogResult.No) return;
+            if (MessageBox.Show("장바구니에서 삭제하시겠습니까?", "Delete", MessageBoxButtons.YesNo) == DialogResult.No) return;
             dgvCart.Rows.Remove(dgvCart.CurrentRow);
         }
 
